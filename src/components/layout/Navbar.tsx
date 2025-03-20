@@ -43,7 +43,7 @@ const Navbar = () => {
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                className="text-foreground/80 hover:text-foreground transition-colors duration-200 text-sm font-medium"
+                className="text-foreground/80 hover:text-yellow-400 transition-colors duration-200 text-sm font-medium"
               >
                 {item}
               </a>
@@ -86,7 +86,7 @@ const Navbar = () => {
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                className="text-foreground/80 hover:text-foreground transition-colors duration-200 text-base font-medium py-2"
+                className="text-foreground/80 hover:text-yellow-400 transition-colors duration-200 text-base font-medium py-2"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item}
