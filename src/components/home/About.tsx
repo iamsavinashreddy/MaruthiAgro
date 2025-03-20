@@ -33,7 +33,7 @@ const About = () => {
           </h2>
           
           <p className="paragraph mb-6">
-            Lakshmi Dall Mill has been serving the community with premium quality food products for over four decades. Our journey began with a simple vision - to provide the purest and most nutritious food grains to every household.
+            Maruthiagro.com has been serving the community with premium quality food products for over four decades. Our journey began with a simple vision - to provide the purest and most nutritious food grains to every household.
           </p>
           
           <p className="paragraph mb-8">
@@ -78,6 +78,7 @@ const About = () => {
               src="https://images.unsplash.com/photo-1560532803-22bc1f7202e4?q=80&w=1974"
               alt="Mill workers harvesting wheat" 
               className="w-full h-full object-cover"
+              loading="lazy"
             />
           </div>
           

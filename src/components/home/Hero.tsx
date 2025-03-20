@@ -33,6 +33,7 @@ const Hero = () => {
           src="https://images.unsplash.com/photo-1530364692703-dd4b0e4c4fde?q=80&w=2070"
           alt="Wheat field" 
           className="w-full h-full object-cover"
+          loading="eager"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-black/20"></div>
       </div>
@@ -63,7 +64,7 @@ const Hero = () => {
               isSubtitleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
             }`}
           >
-            Lakshmi Dall Mill has been providing premium quality food grains and flour 
+            Maruthiagro.com has been providing premium quality food grains and flour 
             since 1975. We are committed to bringing the best agricultural products from 
             farm to your home.
           </p>
