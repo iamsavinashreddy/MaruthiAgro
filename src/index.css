@@ -5,33 +5,33 @@
 
 @layer base {
   :root {
-    --background: 45 100% 99%;
-    --foreground: 20 10% 15%;
+    --background: 60 100% 99%;
+    --foreground: 150 30% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 20 10% 15%;
+    --card-foreground: 150 30% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 20 10% 15%;
+    --popover-foreground: 150 30% 15%;
 
-    --primary: 45 100% 50%;
-    --primary-foreground: 20 10% 15%;
+    --primary: 60 100% 53%;
+    --primary-foreground: 150 30% 15%;
 
-    --secondary: 120 25% 40%;
+    --secondary: 150 70% 22%;
     --secondary-foreground: 0 0% 100%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 45 100% 96%;
-    --accent-foreground: 20 10% 15%;
+    --accent: 60 100% 96%;
+    --accent-foreground: 150 30% 15%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 45 100% 50%;
+    --ring: 60 100% 50%;
 
     --radius: 0.75rem;
   }
@@ -116,11 +116,11 @@
   }
   
   .btn-primary {
-    @apply bg-gold-500 text-foreground hover:bg-gold-600 h-10 py-2 px-4;
+    @apply bg-yellow-400 text-green-950 hover:bg-yellow-500 h-10 py-2 px-4;
   }
   
   .btn-secondary {
-    @apply bg-green-600 text-white hover:bg-green-700 h-10 py-2 px-4;
+    @apply bg-green-800 text-white hover:bg-green-700 h-10 py-2 px-4;
   }
   
   .btn-outline {
@@ -138,11 +138,11 @@
   }
   
   .text-gradient-gold {
-    @apply bg-gradient-to-r from-gold-600 to-gold-400 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-yellow-600 to-yellow-400 bg-clip-text text-transparent;
   }
   
   .text-gradient-green {
-    @apply bg-gradient-to-r from-green-700 to-green-500 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-green-800 to-green-600 bg-clip-text text-transparent;
   }
   
   .animate-delay-100 {

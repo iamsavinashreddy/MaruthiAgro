@@ -28,20 +28,20 @@ const Hero = () => {
     >
       {/* Background with overlay */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-b from-gold-200/40 to-green-100/30"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-yellow-400/40 to-green-800/30"></div>
         <img 
           src="https://images.unsplash.com/photo-1530364692703-dd4b0e4c4fde?q=80&w=2070"
           alt="Wheat field" 
           className="w-full h-full object-cover"
           loading="eager"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-black/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-green-900/40 to-green-800/20"></div>
       </div>
       
       <div className="container max-w-7xl mx-auto px-4 md:px-6 py-20 relative z-10">
         <div className="max-w-4xl">
-          <div className="inline-block mb-3 px-3 py-1 bg-white/80 backdrop-blur-sm rounded-full">
-            <p className="text-sm font-medium text-gold-800">
+          <div className="inline-block mb-3 px-3 py-1 bg-yellow-400/90 backdrop-blur-sm rounded-full">
+            <p className="text-sm font-medium text-green-950">
               Premium Quality Since 1975
             </p>
           </div>
@@ -54,7 +54,7 @@ const Hero = () => {
             }`}
           >
             Bringing Nature's Finest<br />
-            <span className="text-gold-300">Grains to Your Table</span>
+            <span className="text-yellow-400">Grains to Your Table</span>
           </h1>
           
           <p 
@@ -78,14 +78,14 @@ const Hero = () => {
           >
             <a 
               href="#products" 
-              className="btn bg-gold-500 hover:bg-gold-600 text-white rounded-full px-8 py-3 font-medium flex items-center justify-center"
+              className="btn bg-yellow-400 hover:bg-yellow-500 text-green-950 rounded-full px-8 py-3 font-medium flex items-center justify-center"
             >
               Explore Products
               <ArrowRight className="ml-2 h-4 w-4" />
             </a>
             <a 
               href="#about" 
-              className="btn bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border border-white/30 rounded-full px-8 py-3 font-medium flex items-center justify-center"
+              className="btn bg-green-800/80 backdrop-blur-sm hover:bg-green-800 text-white border border-white/30 rounded-full px-8 py-3 font-medium flex items-center justify-center"
             >
               Learn About Us
             </a>
