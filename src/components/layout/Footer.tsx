@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import { 
   MapPin, 
@@ -21,9 +20,9 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center gap-2">
               <div className="w-10 h-10 bg-gold-500 rounded-lg flex items-center justify-center text-white font-bold text-lg">
-                L
+                M
               </div>
-              <span className="text-xl font-bold">Lakshmi Dall Mill</span>
+              <span className="text-xl font-bold">Maruthiagro.com</span>
             </div>
             <p className="text-foreground/70 text-sm max-w-xs">
               Premium quality food grains and flour since 1975. Committed to bringing the best agricultural products to your table.
@@ -116,10 +115,10 @@ const Footer = () => {
               <li className="flex items-center gap-3">
                 <Mail size={18} className="text-gold-600 flex-shrink-0" />
                 <a 
-                  href="mailto:info@lakshmidallmill.com" 
+                  href="mailto:info@maruthiagro.com" 
                   className="text-foreground/70 hover:text-foreground transition-colors"
                 >
-                  info@lakshmidallmill.com
+                  info@maruthiagro.com
                 </a>
               </li>
             </ul>
@@ -128,7 +127,7 @@ const Footer = () => {
         
         <div className="mt-12 pt-8 border-t border-gold-100 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-foreground/60 text-sm">
-            © {currentYear} Lakshmi Dall Mill. All rights reserved.
+            © {currentYear} Maruthiagro.com. All rights reserved.
           </p>
           <div className="flex gap-6">
             <a href="#" className="text-foreground/60 hover:text-foreground text-sm transition-colors">

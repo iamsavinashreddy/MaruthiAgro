@@ -7,19 +7,19 @@ const products = [
     id: 1,
     title: 'Premium Rice',
     description: 'Finest quality premium rice grain, carefully processed for perfect texture and flavor.',
-    imageSrc: 'https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?q=80&w=2070',
+    imageSrc: 'https://images.unsplash.com/photo-1550459251-66a8dbd4d810?q=80&w=2070',
   },
   {
     id: 2,
     title: 'Wheat Flour',
     description: "Stone-ground wheat flour that's perfect for all your baking needs.",
-    imageSrc: 'https://images.unsplash.com/photo-1586444248902-2f64eddc13ee?q=80&w=1964',
+    imageSrc: 'https://images.unsplash.com/photo-1635342219731-4ae49aae884e?q=80&w=1964',
   },
   {
     id: 3,
     title: 'Organic Pulses',
     description: 'Naturally grown pulses that are rich in protein and essential nutrients.',
-    imageSrc: 'https://images.unsplash.com/photo-1515543904379-3d757afe72e4?q=80&w=2056',
+    imageSrc: 'https://images.unsplash.com/photo-1611177180927-da1f16cdd2aa?q=80&w=2056',
   },
   {
     id: 4,
