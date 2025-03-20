@@ -12,7 +12,7 @@ const products = [
   {
     id: 2,
     title: 'Wheat Flour',
-    description: 'Stone-ground wheat flour that's perfect for all your baking needs.',
+    description: "Stone-ground wheat flour that's perfect for all your baking needs.",
     imageSrc: 'https://images.unsplash.com/photo-1586444248902-2f64eddc13ee?q=80&w=1964',
   },
   {
