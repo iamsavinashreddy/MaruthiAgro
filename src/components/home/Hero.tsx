@@ -42,7 +42,7 @@ const Hero = () => {
         <div className="max-w-4xl">
           <div className="inline-block mb-3 px-3 py-1 bg-yellow-400/90 backdrop-blur-sm rounded-full">
             <p className="text-sm font-medium text-green-950">
-              Premium Quality Since 1975
+              Premium Quality Since 2002
             </p>
           </div>
           
@@ -64,8 +64,8 @@ const Hero = () => {
               isSubtitleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
             }`}
           >
-            Maruthiagro.com has been providing premium quality food grains and flour 
-            since 1975. We are committed to bringing the best agricultural products from 
+            MARUTHI Agro has been providing premium quality food grains  
+            since 2002. We are committed to bringing the best agricultural products from 
             farm to your home.
           </p>
           
