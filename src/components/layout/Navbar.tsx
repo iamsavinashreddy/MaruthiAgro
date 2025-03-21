@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { Images } from "../../assets/images";
+import { images } from "../../assets/images"; 
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -37,7 +37,7 @@ const Navbar = () => {
               M
             </div>
             <img 
-          src={Images.logo}
+          src={images.logo}
           alt="Maruthi Agro Logo" 
           className="w-full h-full object-contain rounded-lg"
         />
