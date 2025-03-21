@@ -33,13 +33,13 @@ const Navbar = () => {
             to="/" 
             className="flex items-center gap-2"
           >
-            <div className="w-10 h-10 bg-gold-500 rounded-lg flex items-center justify-center text-white font-bold text-lg">
+            <!--div className="w-10 h-10 bg-gold-500 rounded-lg flex items-center justify-center text-white font-bold text-lg">
               M
-            </div>
+            </div--!>
             <img 
           src={images.logo}
           alt="Maruthi Agro Logo" 
-          className="w-full h-full object-contain rounded-lg"
+          className="w-full h-full object-contain rounded-lg logo-container"
         />
           </Link>
 
