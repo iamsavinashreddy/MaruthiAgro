@@ -35,7 +35,11 @@ const Navbar = () => {
             <div className="w-10 h-10 bg-gold-500 rounded-lg flex items-center justify-center text-white font-bold text-lg">
               M
             </div>
-            <span className="text-xl font-bold">Maruthiagro.com</span>
+            <img 
+          src="../M1_Agro.jpeg" 
+          alt="Maruthi Agro Logo" 
+          className="w-full h-full object-contain rounded-lg"
+        />
           </Link>
 
           <nav className="hidden md:flex items-center gap-8">
