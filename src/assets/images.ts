@@ -1,6 +1,6 @@
 export const images = {
-  logo: "../logo-1.jpeg",
-  hero: "../hero-1.jpeg",
+  logo: "./logo-1.jpeg",
+  hero: "./hero-1.jpeg",
   products: {
     rice: "/rice.jpg",
     flour: "/flour.jpg",
