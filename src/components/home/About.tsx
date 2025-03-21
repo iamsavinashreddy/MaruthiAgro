@@ -29,11 +29,11 @@ const About = () => {
             Our Story
           </p>
           <h2 className="heading-lg mb-6">
-            <span className="text-green-600">Trusted</span> Food Grain Partner Since 1975
+            <span className="text-green-600">Trusted</span> Food Grain Partner Since 2002
           </h2>
           
           <p className="paragraph mb-6">
-            Maruthiagro.com has been serving the community with premium quality food products for over four decades. Our journey began with a simple vision - to provide the purest and most nutritious food grains to every household.
+            MARUTHI Ago has been serving the community with premium quality food products for over four decades. Our journey began with a simple vision - to provide the purest and most nutritious food grains to every household.
           </p>
           
           <p className="paragraph mb-8">
