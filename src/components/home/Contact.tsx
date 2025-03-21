@@ -1,10 +1,11 @@
 
 import { useElementOnScreen } from '@/utils/animations';
 import { MapPin, Phone, Mail } from 'lucide-react';
-import { useState, useEffect, useRef } from 'react';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
+import { Card, CardContent } from '@/components/ui/card';
 
 const Contact = () => {
-  const { containerRef: founderRef, isVisible: isFounderVisible } = useElementOnScreen({
+  const { containerRef: foundersRef, isVisible: isFoundersVisible } = useElementOnScreen({
     root: null,
     rootMargin: '0px',
     threshold: 0.1,
@@ -18,64 +19,109 @@ const Contact = () => {
 
   return (
     <section id="contact" className="section">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
         <div 
-          // @ts-ignore - founderRef is properly typed
-          ref={founderRef}
+          // @ts-ignore - foundersRef is properly typed
+          ref={foundersRef}
           className={`bg-white rounded-2xl p-8 shadow-card border border-gold-100 transition-all duration-1000 ${
-            isFounderVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+            isFoundersVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
           }`}
         >
-          <h2 className="heading-md mb-6">Meet Our Founder</h2>
+          <h2 className="heading-md mb-8">Our Leadership</h2>
           
-          <div className="flex flex-col items-center mb-6">
-            <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-gold-200 mb-4">
-              <img 
-                src="https://images.unsplash.com/photo-1553867669-5d6ef15ffa4f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80"
-                alt="Founder" 
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <h3 className="text-xl font-semibold text-green-800">Mr. Rajesh Kumar</h3>
-            <p className="text-sm text-gold-600 font-medium">Founder & CEO</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Founder */}
+            <Card className="border-gold-100">
+              <CardContent className="p-6 flex flex-col items-center">
+                <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-gold-200 mb-4">
+                  <img 
+                    src="https://images.unsplash.com/photo-1553867669-5d6ef15ffa4f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80"
+                    alt="Founder" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 className="text-xl font-semibold text-green-800 text-center">Mr. Rajesh Kumar</h3>
+                <p className="text-sm text-gold-600 font-medium mb-4 text-center">Founder & CEO</p>
+                
+                <p className="text-sm text-foreground/70 mb-4 text-center">
+                  With over 45 years of experience in the agricultural industry, Mr. Rajesh founded Maruthi Agro in 1975 with a vision to bring premium quality food products to every Indian household.
+                </p>
+                
+                <div className="space-y-3 w-full">
+                  <div className="flex items-center gap-2">
+                    <div className="w-8 h-8 rounded-full bg-gold-100 flex items-center justify-center flex-shrink-0">
+                      <Phone className="h-3.5 w-3.5 text-gold-600" />
+                    </div>
+                    <p className="text-sm text-foreground/70">
+                      <a href="tel:+911234567890" className="hover:text-gold-600 transition-colors">
+                        +91 1234 567 890
+                      </a>
+                    </p>
+                  </div>
+                  
+                  <div className="flex items-center gap-2">
+                    <div className="w-8 h-8 rounded-full bg-gold-100 flex items-center justify-center flex-shrink-0">
+                      <Mail className="h-3.5 w-3.5 text-gold-600" />
+                    </div>
+                    <p className="text-sm text-foreground/70">
+                      <a href="mailto:founder@maruthiagro.com" className="hover:text-gold-600 transition-colors">
+                        founder@maruthiagro.com
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            
+            {/* Co-founder */}
+            <Card className="border-gold-100">
+              <CardContent className="p-6 flex flex-col items-center">
+                <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-gold-200 mb-4">
+                  <img 
+                    src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                    alt="Co-Founder" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 className="text-xl font-semibold text-green-800 text-center">Dr. Alok Sharma</h3>
+                <p className="text-sm text-gold-600 font-medium mb-4 text-center">Co-Founder & COO</p>
+                
+                <p className="text-sm text-foreground/70 mb-4 text-center">
+                  Dr. Alok brings 30 years of expertise in agricultural sciences and business operations. He joined Maruthi Agro in 1990 and has been instrumental in modernizing our production practices.
+                </p>
+                
+                <div className="space-y-3 w-full">
+                  <div className="flex items-center gap-2">
+                    <div className="w-8 h-8 rounded-full bg-gold-100 flex items-center justify-center flex-shrink-0">
+                      <Phone className="h-3.5 w-3.5 text-gold-600" />
+                    </div>
+                    <p className="text-sm text-foreground/70">
+                      <a href="tel:+911234567891" className="hover:text-gold-600 transition-colors">
+                        +91 1234 567 891
+                      </a>
+                    </p>
+                  </div>
+                  
+                  <div className="flex items-center gap-2">
+                    <div className="w-8 h-8 rounded-full bg-gold-100 flex items-center justify-center flex-shrink-0">
+                      <Mail className="h-3.5 w-3.5 text-gold-600" />
+                    </div>
+                    <p className="text-sm text-foreground/70">
+                      <a href="mailto:cofounder@maruthiagro.com" className="hover:text-gold-600 transition-colors">
+                        cofounder@maruthiagro.com
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
           
-          <p className="paragraph mb-6">
-            With over 45 years of experience in the agricultural industry, Mr. Rajesh Kumar founded Maruthi Agro in 1975 with a mission to bring premium quality food products to every Indian household.
-          </p>
-          
-          <div className="space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-gold-100 flex items-center justify-center flex-shrink-0">
-                <Phone className="h-4 w-4 text-gold-600" />
-              </div>
-              <p className="text-foreground/70">
-                <a href="tel:+911234567890" className="hover:text-gold-600 transition-colors">
-                  +91 1234 567 890
-                </a>
-              </p>
-            </div>
-            
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-gold-100 flex items-center justify-center flex-shrink-0">
-                <Mail className="h-4 w-4 text-gold-600" />
-              </div>
-              <p className="text-foreground/70">
-                <a href="mailto:founder@maruthiagro.com" className="hover:text-gold-600 transition-colors">
-                  founder@maruthiagro.com
-                </a>
-              </p>
-            </div>
-            
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-gold-100 flex items-center justify-center flex-shrink-0">
-                <MapPin className="h-4 w-4 text-gold-600" />
-              </div>
-              <p className="text-foreground/70">
-                123 Mill Road, Grain Valley<br />
-                Punjab, India 123456
-              </p>
-            </div>
+          <div className="mt-6 text-center">
+            <p className="text-foreground/70">
+              Our headquarters is located at:<br />
+              123 Mill Road, Grain Valley, Punjab, India 123456
+            </p>
           </div>
         </div>
         
