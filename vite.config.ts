@@ -13,6 +13,15 @@ export default defineConfig(({ mode }) => ({
   plugins: [
     react(),
   ],
+  build: {
+    outDir: "dist",
+    assetsDir: "assets",
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+      },
+    },
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
