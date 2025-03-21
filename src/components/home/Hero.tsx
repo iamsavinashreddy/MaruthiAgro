@@ -30,8 +30,8 @@ const Hero = () => {
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-gradient-to-b from-yellow-400/40 to-green-800/30"></div>
         <img 
-          src="https://images.unsplash.com/photo-1530364692703-dd4b0e4c4fde?q=80&w=2070"
-          alt="Wheat field" 
+          src="../assets/Hero-1.jpeg"
+          alt="Maruthi Agro Banner" 
           className="w-full h-full object-cover"
           loading="eager"
         />
