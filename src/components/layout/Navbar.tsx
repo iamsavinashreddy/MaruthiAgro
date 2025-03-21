@@ -39,7 +39,7 @@ const Navbar = () => {
             <img 
           src={images.logo}
           alt="Maruthi Agro Logo" 
-          className="w-[100px] max-w-[150px] h-auto md:w-[80px] sm:w-[60px]"
+          className="w-[150px] max-w-[300px] h-auto md:w-[100px] sm:w-[150px]"
         />
           </Link>
 
@@ -55,7 +55,7 @@ const Navbar = () => {
             ))}
           </nav>
 
-          <div className="hidden md:block">
+          /* <div className="hidden md:block">
             <a
               href="#contact"
               className="btn btn-primary rounded-full"
@@ -63,7 +63,7 @@ const Navbar = () => {
               Get in Touch
               <ChevronRight className="ml-1 h-4 w-4" />
             </a>
-          </div>
+          </div> */
 
           <button
             className="md:hidden text-foreground focus:outline-none"
