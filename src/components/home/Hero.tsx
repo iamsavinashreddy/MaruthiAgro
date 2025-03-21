@@ -33,7 +33,7 @@ const Hero = () => {
         <img 
           src={images.hero}
           alt="Maruthi Agro Banner" 
-          className="w-full h-full object-cover"
+          className="w-full max-w-[1107px] h-auto sm:h-[250px] object-cover mx-auto"
           loading="eager"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-green-900/40 to-green-800/20"></div>
