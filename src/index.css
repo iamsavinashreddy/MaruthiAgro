@@ -203,3 +203,32 @@
     width: 60px;
   }
 }
+
+  .hero-container {
+  width: 100%;
+  max-width: 1107px; /* Limits max width to original size */
+  height: auto; /* Maintains aspect ratio */
+  display: block; /* Ensures proper spacing */
+  margin: 0 auto; /* Centers the image */
+  object-fit: cover; /* Ensures it fills the container */
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 1024px) {
+  .hero-container {
+    max-width: 90%; /* Shrinks slightly on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-container {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-container {
+    height: 250px; /* Adjust height for mobile */
+    object-fit: cover; /* Ensures it looks good */
+  }
+}
