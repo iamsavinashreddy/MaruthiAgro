@@ -1,15 +1,16 @@
 
 import { useElementOnScreen } from '@/utils/animations';
-import { MapPin, Phone, Mail, ArrowRight } from 'lucide-react';
+import { MapPin, Phone, Mail } from 'lucide-react';
+import { useState, useEffect, useRef } from 'react';
 
 const Contact = () => {
-  const { containerRef: formRef, isVisible: isFormVisible } = useElementOnScreen({
+  const { containerRef: founderRef, isVisible: isFounderVisible } = useElementOnScreen({
     root: null,
     rootMargin: '0px',
     threshold: 0.1,
   });
   
-  const { containerRef: infoRef, isVisible: isInfoVisible } = useElementOnScreen({
+  const { containerRef: mapRef, isVisible: isMapVisible } = useElementOnScreen({
     root: null,
     rootMargin: '0px',
     threshold: 0.1,
@@ -19,149 +20,83 @@ const Contact = () => {
     <section id="contact" className="section">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div 
-          // @ts-ignore - formRef is properly typed
-          ref={formRef}
+          // @ts-ignore - founderRef is properly typed
+          ref={founderRef}
           className={`bg-white rounded-2xl p-8 shadow-card border border-gold-100 transition-all duration-1000 ${
-            isFormVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+            isFounderVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
           }`}
         >
-          <h2 className="heading-md mb-2">Get In Touch</h2>
-          <p className="text-foreground/70 mb-6">
-            We'd love to hear from you. Fill out the form and we'll get back to you as soon as possible.
-          </p>
+          <h2 className="heading-md mb-6">Meet Our Founder</h2>
           
-          <form className="space-y-5">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-foreground/80 mb-1">
-                  Your Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  className="w-full px-4 py-2.5 border border-gold-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold-500/30 focus:border-gold-500 transition-all"
-                  placeholder="John Doe"
-                />
-              </div>
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-foreground/80 mb-1">
-                  Email Address
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  className="w-full px-4 py-2.5 border border-gold-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold-500/30 focus:border-gold-500 transition-all"
-                  placeholder="john@example.com"
-                />
-              </div>
-            </div>
-            
-            <div>
-              <label htmlFor="subject" className="block text-sm font-medium text-foreground/80 mb-1">
-                Subject
-              </label>
-              <input
-                type="text"
-                id="subject"
-                className="w-full px-4 py-2.5 border border-gold-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold-500/30 focus:border-gold-500 transition-all"
-                placeholder="How can we help you?"
+          <div className="flex flex-col items-center mb-6">
+            <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-gold-200 mb-4">
+              <img 
+                src="https://images.unsplash.com/photo-1553867669-5d6ef15ffa4f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80"
+                alt="Founder" 
+                className="w-full h-full object-cover"
               />
             </div>
-            
-            <div>
-              <label htmlFor="message" className="block text-sm font-medium text-foreground/80 mb-1">
-                Your Message
-              </label>
-              <textarea
-                id="message"
-                rows={4}
-                className="w-full px-4 py-2.5 border border-gold-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold-500/30 focus:border-gold-500 transition-all resize-none"
-                placeholder="Tell us about your inquiry..."
-              ></textarea>
+            <h3 className="text-xl font-semibold text-green-800">Mr. Rajesh Kumar</h3>
+            <p className="text-sm text-gold-600 font-medium">Founder & CEO</p>
+          </div>
+          
+          <p className="paragraph mb-6">
+            With over 45 years of experience in the agricultural industry, Mr. Rajesh Kumar founded Maruthi Agro in 1975 with a mission to bring premium quality food products to every Indian household.
+          </p>
+          
+          <div className="space-y-4">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-full bg-gold-100 flex items-center justify-center flex-shrink-0">
+                <Phone className="h-4 w-4 text-gold-600" />
+              </div>
+              <p className="text-foreground/70">
+                <a href="tel:+911234567890" className="hover:text-gold-600 transition-colors">
+                  +91 1234 567 890
+                </a>
+              </p>
             </div>
             
-            <button
-              type="submit"
-              className="w-full bg-green-600 hover:bg-green-700 text-white rounded-lg py-3 font-medium transition-all flex items-center justify-center group"
-            >
-              Send Message
-              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-            </button>
-          </form>
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-full bg-gold-100 flex items-center justify-center flex-shrink-0">
+                <Mail className="h-4 w-4 text-gold-600" />
+              </div>
+              <p className="text-foreground/70">
+                <a href="mailto:founder@maruthiagro.com" className="hover:text-gold-600 transition-colors">
+                  founder@maruthiagro.com
+                </a>
+              </p>
+            </div>
+            
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-full bg-gold-100 flex items-center justify-center flex-shrink-0">
+                <MapPin className="h-4 w-4 text-gold-600" />
+              </div>
+              <p className="text-foreground/70">
+                123 Mill Road, Grain Valley<br />
+                Punjab, India 123456
+              </p>
+            </div>
+          </div>
         </div>
         
         <div 
-          // @ts-ignore - infoRef is properly typed
-          ref={infoRef}
-          className={`transition-all duration-1000 delay-300 ${
-            isInfoVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+          // @ts-ignore - mapRef is properly typed
+          ref={mapRef}
+          className={`transition-all duration-1000 delay-300 h-96 rounded-2xl overflow-hidden shadow-card border border-gold-100 ${
+            isMapVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
           }`}
         >
-          <p className="text-gold-600 text-sm font-semibold tracking-wider uppercase mb-2">
-            Contact Information
-          </p>
-          <h2 className="heading-lg mb-6">
-            We're Here To <span className="text-green-600">Help You</span>
-          </h2>
-          
-          <p className="paragraph mb-8">
-            Whether you have a question about our products, want to place a bulk order, or just want to say hello, we're always happy to hear from you.
-          </p>
-          
-          <div className="space-y-6 mb-8">
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-full bg-gold-100 flex items-center justify-center flex-shrink-0">
-                <MapPin className="h-5 w-5 text-gold-600" />
-              </div>
-              <div>
-                <h4 className="text-lg font-medium mb-1">Visit Us</h4>
-                <p className="text-foreground/70">
-                  123 Mill Road, Grain Valley<br />
-                  Punjab, India 123456
-                </p>
-              </div>
-            </div>
-            
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-full bg-gold-100 flex items-center justify-center flex-shrink-0">
-                <Phone className="h-5 w-5 text-gold-600" />
-              </div>
-              <div>
-                <h4 className="text-lg font-medium mb-1">Call Us</h4>
-                <p className="text-foreground/70">
-                  <a href="tel:+911234567890" className="hover:text-gold-600 transition-colors">
-                    +91 1234 567 890
-                  </a><br />
-                  <a href="tel:+911234567891" className="hover:text-gold-600 transition-colors">
-                    +91 1234 567 891
-                  </a>
-                </p>
-              </div>
-            </div>
-            
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-full bg-gold-100 flex items-center justify-center flex-shrink-0">
-                <Mail className="h-5 w-5 text-gold-600" />
-              </div>
-              <div>
-                <h4 className="text-lg font-medium mb-1">Email Us</h4>
-                <p className="text-foreground/70">
-                  <a href="mailto:info@lakshmidallmill.com" className="hover:text-gold-600 transition-colors">
-                    info@lakshmidallmill.com
-                  </a><br />
-                  <a href="mailto:sales@lakshmidallmill.com" className="hover:text-gold-600 transition-colors">
-                    sales@lakshmidallmill.com
-                  </a>
-                </p>
-              </div>
-            </div>
-          </div>
-          
-          <div className="p-4 bg-green-50 border border-green-100 rounded-lg">
-            <p className="text-green-700 text-sm">
-              <strong>Business Hours:</strong> Monday to Saturday, 9:00 AM to 6:00 PM
-            </p>
-          </div>
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3498.673346178086!2d77.1053566744039!3d28.714345582097936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d013a47a1365d%3A0xe30b562347e202df!2sIndian%20Agricultural%20Research%20Institute!5e0!3m2!1sen!2sin!4v1700156246201!5m2!1sen!2sin"
+            width="100%" 
+            height="100%" 
+            style={{ border: 0 }} 
+            allowFullScreen={true} 
+            loading="lazy" 
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Maruthi Agro Location"
+            className="w-full h-full"
+          ></iframe>
         </div>
       </div>
     </section>
