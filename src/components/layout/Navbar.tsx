@@ -97,14 +97,14 @@ const Navbar = () => {
                 {item}
               </a>
             ))}
-            <a
+            {/* <a
               href="#contact"
               className="btn btn-primary rounded-full mt-2 w-full justify-center"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Get in Touch
               <ChevronRight className="ml-1 h-4 w-4" />
-            </a>
+            </a> */}
           </nav>
         </div>
       </div>
