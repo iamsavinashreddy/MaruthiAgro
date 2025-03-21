@@ -3,7 +3,7 @@
 // In a real application, we would import actual image files
 
 export const images = {
-  logo: '/logo.svg',
+  logo: '/M1_Agro.jpeg',
   hero: '/hero.jpg',
   products: {
     rice: '/rice.jpg',
