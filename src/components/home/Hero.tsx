@@ -1,6 +1,7 @@
 
 import { useElementOnScreen } from '@/utils/animations';
 import { ArrowRight } from 'lucide-react';
+import { images } from "../../assets/images";
 
 const Hero = () => {
   const { containerRef: titleRef, isVisible: isTitleVisible } = useElementOnScreen({
@@ -30,7 +31,7 @@ const Hero = () => {
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-gradient-to-b from-yellow-400/40 to-green-800/30"></div>
         <img 
-          src="../assets/Hero-1.jpeg"
+          src={images.hero}
           alt="Maruthi Agro Banner" 
           className="w-full h-full object-cover"
           loading="eager"
