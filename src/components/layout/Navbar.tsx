@@ -36,7 +36,7 @@ const Navbar = () => {
               M
             </div>
             <img 
-          src="../M1_Agro.jpeg" 
+          src={logo}
           alt="Maruthi Agro Logo" 
           className="w-full h-full object-contain rounded-lg"
         />
