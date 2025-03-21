@@ -185,3 +185,21 @@
     mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
   }
 }
+
+  .logo-container {
+  width: 100px; /* Adjust base size as needed */
+  max-width: 150px; /* Ensures it doesn't grow too large */
+  height: auto; /* Maintains aspect ratio */
+}
+
+@media (max-width: 768px) { /* Adjust size for tablets */
+  .logo-container {
+    width: 80px;
+  }
+}
+
+@media (max-width: 480px) { /* Adjust size for mobile screens */
+  .logo-container {
+    width: 60px;
+  }
+}
