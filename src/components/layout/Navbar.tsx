@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -38,7 +37,7 @@ const Navbar = () => {
             <img 
               src={images.logo}
               alt="Maruthi Agro Logo" 
-              className="w-[150px] max-w-[300px] h-auto md:w-[100px] sm:w-[150px]"
+              className="w-[200px] max-w-[400px] h-auto md:w-[200px] sm:w-[300px]"
             />
           </Link>
 
@@ -56,20 +55,22 @@ const Navbar = () => {
             ))}
           </nav>
 
-          <div className="hidden md:block w-[150px]">
+          <div className="hidden md:block w-[200px]">
             {/* Empty div to balance the layout and keep nav centered */}
           </div>
 
           {/* Mobile menu toggle button - Made larger and more visible */}
           <button
-            className="md:hidden text-foreground p-2 bg-white/10 rounded-md hover:bg-white/20 transition-colors focus:outline-none"
+            className={`md:hidden text-foreground p-2 rounded-md transition-colors focus:outline-none ${
+              isScrolled ? 'bg-white/20 hover:bg-white/30' : 'glass hover:bg-white/20'
+            }`}
             onClick={toggleMobileMenu}
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? (
-              <X className="h-7 w-7" />
+              <X className="h-8 w-8" />
             ) : (
-              <Menu className="h-7 w-7" />
+              <Menu className="h-8 w-8" />
             )}
           </button>
         </div>

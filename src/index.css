@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -186,37 +185,36 @@
   }
 }
 
-  .logo-container {
-  width: 100px; /* Adjust base size as needed */
-  max-width: 150px; /* Ensures it doesn't grow too large */
-  height: auto; /* Maintains aspect ratio */
+.logo-container {
+  width: 200px;
+  max-width: 300px;
+  height: auto;
 }
 
-@media (max-width: 768px) { /* Adjust size for tablets */
+@media (max-width: 768px) {
   .logo-container {
-    width: 80px;
+    width: 160px;
   }
 }
 
-@media (max-width: 480px) { /* Adjust size for mobile screens */
+@media (max-width: 480px) {
   .logo-container {
-    width: 60px;
+    width: 120px;
   }
 }
 
-  .hero-container {
+.hero-container {
   width: 100%;
-  max-width: 1107px; /* Limits max width to original size */
-  height: auto; /* Maintains aspect ratio */
-  display: block; /* Ensures proper spacing */
-  margin: 0 auto; /* Centers the image */
-  object-fit: cover; /* Ensures it fills the container */
+  max-width: 1107px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
 }
 
-/* Adjust for smaller screens */
 @media (max-width: 1024px) {
   .hero-container {
-    max-width: 90%; /* Shrinks slightly on tablets */
+    max-width: 90%;
   }
 }
 
@@ -228,7 +226,7 @@
 
 @media (max-width: 480px) {
   .hero-container {
-    height: 250px; /* Adjust height for mobile */
-    object-fit: cover; /* Ensures it looks good */
+    height: 250px;
+    object-fit: cover;
   }
 }
