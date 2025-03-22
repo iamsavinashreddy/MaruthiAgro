@@ -40,11 +40,11 @@ const Contact = () => {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <h3 className="text-xl font-semibold text-green-800 text-center">Mr. Rajesh Kumar</h3>
-                <p className="text-sm text-gold-600 font-medium mb-4 text-center">Founder & CEO</p>
+                <h3 className="text-xl font-semibold text-green-800 text-center"> Pruthvi Pulicharla</h3>
+                <p className="text-sm text-gold-600 font-medium mb-4 text-center">Founder</p>
                 
                 <p className="text-sm text-foreground/70 mb-4 text-center">
-                  With over 45 years of experience in the agricultural industry, Mr. Rajesh founded Maruthi Agro in 1975 with a vision to bring premium quality food products to every Indian household.
+                 Mr Pruthvi is the visionary leader, a powerhouse in the construction and infrastructure industry. With over 15 years of experience, he has been at the forefront of delivering innovative and high-quality projects that shape skylines and strengthen communities. Committed to excellence, he continues to drive growth, sustainability, and progress in the industry.
                 </p>
                 
                 <div className="space-y-3 w-full">
@@ -54,7 +54,7 @@ const Contact = () => {
                     </div>
                     <p className="text-sm text-foreground/70">
                       <a href="tel:+911234567890" className="hover:text-gold-600 transition-colors">
-                        +91 1234 567 890
+                        +91 99592 43663
                       </a>
                     </p>
                   </div>
@@ -83,11 +83,11 @@ const Contact = () => {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <h3 className="text-xl font-semibold text-green-800 text-center">Dr. Alok Sharma</h3>
-                <p className="text-sm text-gold-600 font-medium mb-4 text-center">Co-Founder & COO</p>
+                <h3 className="text-xl font-semibold text-green-800 text-center">Mr Hanuman Batchu</h3>
+                <p className="text-sm text-gold-600 font-medium mb-4 text-center">Managing Partner/p>
                 
                 <p className="text-sm text-foreground/70 mb-4 text-center">
-                  Dr. Alok brings 30 years of expertise in agricultural sciences and business operations. He joined Maruthi Agro in 1990 and has been instrumental in modernizing our production practices.
+                  Hanuman is bringing expertise in accounting and financial management. With a keen eye for financial strategy and over 15 years of experience, he ensures the company's fiscal health, operational efficiency, and sustainable growth..
                 </p>
                 
                 <div className="space-y-3 w-full">
@@ -97,7 +97,7 @@ const Contact = () => {
                     </div>
                     <p className="text-sm text-foreground/70">
                       <a href="tel:+911234567891" className="hover:text-gold-600 transition-colors">
-                        +91 1234 567 891
+                        +91 97000 20201
                       </a>
                     </p>
                   </div>
@@ -120,7 +120,7 @@ const Contact = () => {
           <div className="mt-6 text-center">
             <p className="text-foreground/70">
               Our headquarters is located at:<br />
-              123 Mill Road, Grain Valley, Punjab, India 123456
+              Syno. 170, Back side of IFFCO kissan SEZ, Uchaguntapalem, Dagadarthi, Andhra Pradesh 524240, India
             </p>
           </div>
         </div>
@@ -133,7 +133,7 @@ const Contact = () => {
           }`}
         >
           <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3498.673346178086!2d77.1053566744039!3d28.714345582097936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d013a47a1365d%3A0xe30b562347e202df!2sIndian%20Agricultural%20Research%20Institute!5e0!3m2!1sen!2sin!4v1700156246201!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.6455099602035!2d79.9624333793457!3d14.619258799999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4c8fa8c32b4247%3A0xea458ab89b0d57b7!2sMaruthi%20Agro%20Products!5e0!3m2!1sen!2sus!4v1742611032867!5m2!1sen!2sus"
             width="100%" 
             height="100%" 
             style={{ border: 0 }} 
