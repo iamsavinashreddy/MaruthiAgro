@@ -62,11 +62,11 @@ const Navbar = () => {
           <div className="hidden md:block w-[200px]">
             {/* Empty div to balance the layout and keep nav centered */}
           </div>
-
+          
           {/* Mobile menu toggle button - Made larger and more visible */}
           <button
             className={`md:hidden text-white p-2 rounded-md transition-colors focus:outline-none ${
-              isScrolled ? 'bg-white/20 hover:bg-white/30' : 'glass hover:bg-white/20'
+              isScrolled ? 'bg-gradient-to-r from-white/20 to-white/30 hover:from-white/30 hover:to-white/40' : 'glass hover:bg-white/20'
             }`}
             onClick={toggleMobileMenu}
             aria-label="Toggle menu"
@@ -77,30 +77,28 @@ const Navbar = () => {
               <Menu className="h-8 w-8" />
             )}
           </button>
+          
+          {/* Improved Mobile Menu - with white text */}
+          <div
+            className={`md:hidden fixed top-[60px] left-0 right-0 bottom-0 bg-gradient-to-b from-yellow-400/95 to-green-800/95 backdrop-blur-md shadow-medium transition-all duration-300 ease-in-out ${
+              isMobileMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
+            }`}
+          >
+            <div className="container mx-auto px-4 py-6">
+              <nav className="flex flex-col gap-6">
+                {['Home', 'Products', 'About', 'Contact'].map((item) => (
+                  <a
+                    key={item}
+                    href={`#${item.toLowerCase()}`}
+                    className="text-white hover:text-yellow-100 transition-colors duration-200 text-xl font-medium py-4 px-4 border-b border-white/10 flex items-center justify-center"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {item}
+                  </a>
+                ))}
+              </nav>
+            </div>
         </div>
-      </div>
-
-      {/* Improved Mobile Menu - with white text */}
-      <div
-        className={`md:hidden fixed top-[60px] left-0 right-0 bottom-0 bg-gradient-to-b from-yellow-400/95 to-green-800/95 backdrop-blur-md shadow-medium transition-all duration-300 ease-in-out ${
-          isMobileMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
-        }`}
-      >
-        <div className="container mx-auto px-4 py-6">
-          <nav className="flex flex-col gap-6">
-            {['Home', 'Products', 'About', 'Contact'].map((item) => (
-              <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
-                className="text-white hover:text-yellow-100 transition-colors duration-200 text-xl font-medium py-4 px-4 border-b border-white/10 flex items-center justify-center"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {item}
-              </a>
-            ))}
-          </nav>
-        </div>
-      </div>
     </header>
   );
 };
