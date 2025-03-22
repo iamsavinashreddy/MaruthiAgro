@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -37,17 +38,17 @@ const Navbar = () => {
             <img 
               src={images.logo}
               alt="Maruthi Agro Logo" 
-              className="w-[200px] max-w-[400px] h-auto md:w-[200px] sm:w-[300px]"
+              className="logo-container rounded-xl"
             />
           </Link>
 
-          {/* Desktop Navigation - Now centered and with larger menu items */}
+          {/* Desktop Navigation - Now with bright white menu items */}
           <nav className="hidden md:flex items-center gap-10 mx-auto">
             {['Home', 'Products', 'About', 'Contact'].map((item) => (
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                className="text-foreground/80 hover:text-yellow-400 transition-colors duration-200 text-base font-medium px-2 py-1 rounded-md hover:bg-white/10"
+                className="text-white hover:text-yellow-400 transition-colors duration-200 text-base font-medium px-2 py-1 rounded-md hover:bg-white/10"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item}
@@ -61,7 +62,7 @@ const Navbar = () => {
 
           {/* Mobile menu toggle button - Made larger and more visible */}
           <button
-            className={`md:hidden text-foreground p-2 rounded-md transition-colors focus:outline-none ${
+            className={`md:hidden text-white p-2 rounded-md transition-colors focus:outline-none ${
               isScrolled ? 'bg-white/20 hover:bg-white/30' : 'glass hover:bg-white/20'
             }`}
             onClick={toggleMobileMenu}
@@ -76,7 +77,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Improved Mobile Menu */}
+      {/* Improved Mobile Menu - with white text */}
       <div
         className={`md:hidden fixed top-[60px] left-0 right-0 bottom-0 bg-gradient-to-b from-yellow-400/95 to-green-800/95 backdrop-blur-md shadow-medium transition-all duration-300 ease-in-out ${
           isMobileMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
@@ -88,7 +89,7 @@ const Navbar = () => {
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                className="text-foreground/90 hover:text-white transition-colors duration-200 text-xl font-medium py-4 px-4 border-b border-white/10 flex items-center justify-center"
+                className="text-white hover:text-yellow-100 transition-colors duration-200 text-xl font-medium py-4 px-4 border-b border-white/10 flex items-center justify-center"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item}

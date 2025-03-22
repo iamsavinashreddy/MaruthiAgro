@@ -1,20 +1,21 @@
 
 /* Logo styles */
 .logo-container {
-  width: 200px;
-  max-width: 300px;
+  width: 400px;
+  max-width: 600px;
   height: auto;
+  border-radius: 0.75rem;
 }
 
 @media (max-width: 768px) {
   .logo-container {
-    width: 160px;
+    width: 320px;
   }
 }
 
 @media (max-width: 480px) {
   .logo-container {
-    width: 120px;
+    width: 240px;
   }
 }
 
