@@ -42,13 +42,16 @@ const Navbar = () => {
             />
           </Link>
 
-          {/* Desktop Navigation - Now with bright white menu items */}
+          {/* Desktop Navigation - Now with bright white menu items
+          "text-white hover:text-yellow-400 transition-colors duration-200 text-base font-medium px-2 py-1 rounded-md hover:bg-white/10"
+
+           */}
           <nav className="hidden md:flex items-center gap-10 mx-auto">
             {['Home', 'Products', 'About', 'Contact'].map((item) => (
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                className="text-white hover:text-yellow-400 transition-colors duration-200 text-base font-medium px-2 py-1 rounded-md hover:bg-white/10"
+                className= "text-white hover:text-yellow-400 transition-colors duration-200 text-base font-medium px-2 py-1 rounded-md hover:bg-white/10"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item}
