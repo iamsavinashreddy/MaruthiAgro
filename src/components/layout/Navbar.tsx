@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -92,7 +91,7 @@ const Navbar = () => {
                   <a
                     key={item}
                     href={`#${item.toLowerCase()}`}
-                    className="text-white hover:text-yellow-100 transition-colors duration-200 text-xl font-medium py-4 px-4 border-b border-white/10 flex items-center justify-center"
+                    className="bg-green-800 border-2 border-yellow-400 text-white hover:text-yellow-400 transition-colors duration-200 text-base font-medium px-2 py-1 rounded-md hover:bg-green-700"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {item}
@@ -101,6 +100,8 @@ const Navbar = () => {
               </nav>
             </div>
           </div>
+        </div>
+      </div>
     </header>
   );
 };
