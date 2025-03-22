@@ -1,0 +1,48 @@
+
+/* Logo styles */
+.logo-container {
+  width: 200px;
+  max-width: 300px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .logo-container {
+    width: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-container {
+    width: 120px;
+  }
+}
+
+/* Hero image container styles */
+.hero-container {
+  width: 100%;
+  max-width: 1107px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+@media (max-width: 1024px) {
+  .hero-container {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-container {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-container {
+    height: 250px;
+    object-fit: cover;
+  }
+}
