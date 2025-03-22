@@ -19,10 +19,9 @@ const Contact = () => {
   });
 
   return (
-    <section id="contact" className="section">
+    <div id="contact" className="section">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
         <div 
-          // @ts-ignore - foundersRef is properly typed
           ref={foundersRef}
           className={`bg-white rounded-2xl p-8 shadow-card border border-gold-100 transition-all duration-1000 ${
             isFoundersVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
@@ -85,10 +84,10 @@ const Contact = () => {
                   />
                 </div>
                 <h3 className="text-xl font-semibold text-green-800 text-center">Mr Hanuman Batchu</h3>
-                <p className="text-sm text-gold-600 font-medium mb-4 text-center">Managing Partner/p>
+                <p className="text-sm text-gold-600 font-medium mb-4 text-center">Managing Partner</p>
                 
                 <p className="text-sm text-foreground/70 mb-4 text-center">
-                  Hanuman is bringing expertise in accounting and financial management. With a keen eye for financial strategy and over 15 years of experience, he ensures the company's fiscal health, operational efficiency, and sustainable growth..
+                  Hanuman is bringing expertise in accounting and financial management. With a keen eye for financial strategy and over 15 years of experience, he ensures the company's fiscal health, operational efficiency, and sustainable growth.
                 </p>
                 
                 <div className="space-y-3 w-full">
@@ -127,7 +126,6 @@ const Contact = () => {
         </div>
         
         <div 
-          // @ts-ignore - mapRef is properly typed
           ref={mapRef}
           className={`transition-all duration-1000 delay-300 h-96 rounded-2xl overflow-hidden shadow-card border border-gold-100 ${
             isMapVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
@@ -146,7 +144,7 @@ const Contact = () => {
           ></iframe>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

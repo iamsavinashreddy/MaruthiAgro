@@ -1,6 +1,5 @@
-
 import { useState, useEffect } from 'react';
-import { Menu, X, ChevronRight } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { images } from "../../assets/images"; 
 
@@ -24,7 +23,9 @@ const Navbar = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'py-3 glass shadow-soft' : 'py-5 bg-transparent'
+        isScrolled 
+          ? 'py-3 bg-gradient-to-r from-yellow-400/90 to-green-800/90 backdrop-blur-md shadow-soft' 
+          : 'py-5 bg-transparent'
       }`}
     >
       <div className="container max-w-7xl mx-auto px-4 md:px-6">
@@ -33,17 +34,14 @@ const Navbar = () => {
             to="/" 
             className="flex items-center gap-2"
           >
-            {/* <div className="w-10 h-10 bg-gold-500 rounded-lg flex items-center justify-center text-white font-bold text-lg">
-              M
-            </div> */}
             <img 
-          src={images.logo}
-          alt="Maruthi Agro Logo" 
-          className="w-[150px] max-w-[300px] h-auto md:w-[100px] sm:w-[150px]"
-        />
+              src={images.logo}
+              alt="Maruthi Agro Logo" 
+              className="w-[150px] max-w-[300px] h-auto md:w-[100px] sm:w-[150px]"
+            />
           </Link>
 
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-8 mx-auto">
             {['Home', 'Products', 'About', 'Contact'].map((item) => (
               <a
                 key={item}
@@ -55,15 +53,9 @@ const Navbar = () => {
             ))}
           </nav>
 
-          {/* <div className="hidden md:block">
-            <a
-              href="#contact"
-              className="btn btn-primary rounded-full"
-            >
-              Get in Touch
-              <ChevronRight className="ml-1 h-4 w-4" />
-            </a>
-          </div> */}
+          <div className="hidden md:block w-[150px]">
+            {/* Empty div to balance the layout and keep nav centered */}
+          </div>
 
           <button
             className="md:hidden text-foreground focus:outline-none"
@@ -81,7 +73,7 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       <div
-        className={`md:hidden absolute top-full left-0 right-0 glass shadow-medium transition-transform duration-300 ease-in-out ${
+        className={`md:hidden absolute top-full left-0 right-0 bg-gradient-to-b from-yellow-400/90 to-green-800/90 backdrop-blur-md shadow-medium transition-transform duration-300 ease-in-out ${
           isMobileMenuOpen ? 'translate-y-0' : '-translate-y-full'
         }`}
       >
@@ -97,14 +89,6 @@ const Navbar = () => {
                 {item}
               </a>
             ))}
-            {/* <a
-              href="#contact"
-              className="btn btn-primary rounded-full mt-2 w-full justify-center"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Get in Touch
-              <ChevronRight className="ml-1 h-4 w-4" />
-            </a> */}
           </nav>
         </div>
       </div>

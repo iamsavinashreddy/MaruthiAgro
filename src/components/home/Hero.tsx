@@ -33,7 +33,7 @@ const Hero = () => {
         <img 
           src={images.hero}
           alt="Maruthi Agro Banner" 
-          className="w-full max-w-[1107px] h-auto sm:h-[250px] object-cover mx-auto"
+          className="w-full h-full object-cover"
           loading="eager"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-green-900/40 to-green-800/20"></div>
@@ -48,7 +48,6 @@ const Hero = () => {
           </div>
           
           <h1 
-            // @ts-ignore - titleRef is properly typed
             ref={titleRef}
             className={`heading-xl text-white mb-6 transition-all duration-1000 ${
               isTitleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
@@ -59,7 +58,6 @@ const Hero = () => {
           </h1>
           
           <p 
-            // @ts-ignore - subtitleRef is properly typed
             ref={subtitleRef}
             className={`text-lg md:text-xl text-white/80 max-w-2xl mb-8 transition-all duration-1000 delay-300 ${
               isSubtitleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
@@ -71,7 +69,6 @@ const Hero = () => {
           </p>
           
           <div 
-            // @ts-ignore - ctaRef is properly typed
             ref={ctaRef}
             className={`flex flex-col sm:flex-row gap-4 transition-all duration-1000 delay-500 ${
               isCtaVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
