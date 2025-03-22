@@ -6,13 +6,13 @@ import { Card, CardContent } from '@/components/ui/card';
 import React from "react";
 
 const Contact = () => {
-  const { containerRef: foundersRef, isVisible: isFoundersVisible } = useElementOnScreen({
+  const { containerRef: foundersRef, isVisible: isFoundersVisible } = useElementOnScreen<HTMLDivElement>({
     root: null,
     rootMargin: '0px',
     threshold: 0.1,
   });
   
-  const { containerRef: mapRef, isVisible: isMapVisible } = useElementOnScreen({
+  const { containerRef: mapRef, isVisible: isMapVisible } = useElementOnScreen<HTMLDivElement>({
     root: null,
     rootMargin: '0px',
     threshold: 0.1,

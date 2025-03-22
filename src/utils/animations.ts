@@ -1,53 +1,36 @@
 
-import { useEffect, useState, useRef } from 'react';
+import { useState, useEffect, useRef, RefObject } from 'react';
 
-export function useElementOnScreen(options: IntersectionObserverInit) {
-  const containerRef = useRef<HTMLElement>(null);
+interface UseElementOnScreenOptions {
+  root: Element | null;
+  rootMargin: string;
+  threshold: number;
+}
+
+interface UseElementOnScreenResult<T extends HTMLElement> {
+  containerRef: RefObject<T>;
+  isVisible: boolean;
+}
+
+export const useElementOnScreen = <T extends HTMLElement = HTMLElement>(
+  options: UseElementOnScreenOptions
+): UseElementOnScreenResult<T> => {
+  const containerRef = useRef<T>(null);
   const [isVisible, setIsVisible] = useState(false);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(([entry]) => {
-      setIsVisible(entry.isIntersecting);
-    }, options);
+  const callbackFunction = (entries: IntersectionObserverEntry[]) => {
+    const [entry] = entries;
+    setIsVisible(entry.isIntersecting);
+  };
 
-    const currentElement = containerRef.current;
-    if (currentElement) {
-      observer.observe(currentElement);
-    }
+  useEffect(() => {
+    const observer = new IntersectionObserver(callbackFunction, options);
+    if (containerRef.current) observer.observe(containerRef.current);
 
     return () => {
-      if (currentElement) {
-        observer.unobserve(currentElement);
-      }
+      if (containerRef.current) observer.unobserve(containerRef.current);
     };
-  }, [options]);
+  }, [containerRef, options]);
 
   return { containerRef, isVisible };
-}
-
-export function getAnimationClasses(isVisible: boolean, baseClass: string, delay: number = 0) {
-  return isVisible
-    ? `${baseClass} opacity-100 transform-none transition-all duration-700 ease-out ${delay ? `delay-${delay}` : ''}`
-    : `${baseClass} opacity-0 transform translate-y-8 transition-all duration-700 ease-out ${delay ? `delay-${delay}` : ''}`;
-}
-
-export function useScrollProgress() {
-  const [scrollProgress, setScrollProgress] = useState(0);
-  
-  useEffect(() => {
-    const updateScrollProgress = () => {
-      const currentScrollPos = window.scrollY;
-      const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-      if (scrollHeight > 0) {
-        setScrollProgress(currentScrollPos / scrollHeight);
-      }
-    };
-    
-    window.addEventListener('scroll', updateScrollProgress);
-    updateScrollProgress();
-    
-    return () => window.removeEventListener('scroll', updateScrollProgress);
-  }, []);
-  
-  return scrollProgress;
-}
+};

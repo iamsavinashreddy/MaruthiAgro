@@ -1,3 +1,4 @@
+
 export const images = {
   logo: "./logo-1.jpeg",
   hero: "./hero-1.jpeg",
@@ -15,8 +16,8 @@ export const images = {
 };
 
 // Function to get a general image URL
-export const getImageUrl = (name: keyof typeof images): string => {
-  return images[name] ?? images.placeholder;
+export const getImageUrl = (name: keyof Omit<typeof images, 'products'>): string => {
+  return images[name] as string;
 };
 
 // Function to get a product image URL

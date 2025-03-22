@@ -4,19 +4,19 @@ import { ArrowRight } from 'lucide-react';
 import { images } from "../../assets/images";
 
 const Hero = () => {
-  const { containerRef: titleRef, isVisible: isTitleVisible } = useElementOnScreen({
+  const { containerRef: titleRef, isVisible: isTitleVisible } = useElementOnScreen<HTMLHeadingElement>({
     root: null,
     rootMargin: '0px',
     threshold: 0.1,
   });
   
-  const { containerRef: subtitleRef, isVisible: isSubtitleVisible } = useElementOnScreen({
+  const { containerRef: subtitleRef, isVisible: isSubtitleVisible } = useElementOnScreen<HTMLParagraphElement>({
     root: null,
     rootMargin: '0px',
     threshold: 0.1,
   });
   
-  const { containerRef: ctaRef, isVisible: isCtaVisible } = useElementOnScreen({
+  const { containerRef: ctaRef, isVisible: isCtaVisible } = useElementOnScreen<HTMLDivElement>({
     root: null,
     rootMargin: '0px',
     threshold: 0.1,

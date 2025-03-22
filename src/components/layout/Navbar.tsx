@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -41,12 +42,14 @@ const Navbar = () => {
             />
           </Link>
 
-          <nav className="hidden md:flex items-center gap-8 mx-auto">
+          {/* Desktop Navigation - Now centered and with larger menu items */}
+          <nav className="hidden md:flex items-center gap-10 mx-auto">
             {['Home', 'Products', 'About', 'Contact'].map((item) => (
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                className="text-foreground/80 hover:text-yellow-400 transition-colors duration-200 text-sm font-medium"
+                className="text-foreground/80 hover:text-yellow-400 transition-colors duration-200 text-base font-medium px-2 py-1 rounded-md hover:bg-white/10"
+                onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item}
               </a>
@@ -57,33 +60,34 @@ const Navbar = () => {
             {/* Empty div to balance the layout and keep nav centered */}
           </div>
 
+          {/* Mobile menu toggle button - Made larger and more visible */}
           <button
-            className="md:hidden text-foreground focus:outline-none"
+            className="md:hidden text-foreground p-2 bg-white/10 rounded-md hover:bg-white/20 transition-colors focus:outline-none"
             onClick={toggleMobileMenu}
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? (
-              <X className="h-6 w-6" />
+              <X className="h-7 w-7" />
             ) : (
-              <Menu className="h-6 w-6" />
+              <Menu className="h-7 w-7" />
             )}
           </button>
         </div>
       </div>
 
-      {/* Mobile menu */}
+      {/* Improved Mobile Menu */}
       <div
-        className={`md:hidden absolute top-full left-0 right-0 bg-gradient-to-b from-yellow-400/90 to-green-800/90 backdrop-blur-md shadow-medium transition-transform duration-300 ease-in-out ${
-          isMobileMenuOpen ? 'translate-y-0' : '-translate-y-full'
+        className={`md:hidden fixed top-[60px] left-0 right-0 bottom-0 bg-gradient-to-b from-yellow-400/95 to-green-800/95 backdrop-blur-md shadow-medium transition-all duration-300 ease-in-out ${
+          isMobileMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
         }`}
       >
-        <div className="container mx-auto px-4 py-4">
-          <nav className="flex flex-col gap-4">
+        <div className="container mx-auto px-4 py-6">
+          <nav className="flex flex-col gap-6">
             {['Home', 'Products', 'About', 'Contact'].map((item) => (
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                className="text-foreground/80 hover:text-yellow-400 transition-colors duration-200 text-base font-medium py-2"
+                className="text-foreground/90 hover:text-white transition-colors duration-200 text-xl font-medium py-4 px-4 border-b border-white/10 flex items-center justify-center"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item}
