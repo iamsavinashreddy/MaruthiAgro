@@ -80,7 +80,9 @@ const Navbar = () => {
           
           {/* Improved Mobile Menu - with white text */}
           <div
-            className={`md:hidden fixed top-[60px] left-0 right-0 bottom-0 bg-gradient-to-b from-yellow-400/95 to-green-800/95 backdrop-blur-md shadow-medium transition-all duration-300 ease-in-out ${
+            className={`md:hidden fixed top-[60px] left-0 right-0 bottom-0 transition-all duration-300 ease-in-out ${
+              isScrolled ? 'bg-gradient-to-b from-yellow-400/95 to-green-800/95' : 'bg-gradient-to-b from-yellow-500/90 to-green-700/90'
+            } ${
               isMobileMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
             }`}
           >
@@ -98,7 +100,7 @@ const Navbar = () => {
                 ))}
               </nav>
             </div>
-        </div>
+          </div>
     </header>
   );
 };
