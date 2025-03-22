@@ -51,7 +51,7 @@ const Navbar = () => {
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                className= "bg-green-800 border-2 border-white text-white hover:text-yellow-400 transition-colors duration-200 text-base font-medium px-2 py-1 rounded-md hover:bg-green-700"
+                className= "bg-green-800 border-2 border-yellow-400 text-white hover:text-yellow-400 transition-colors duration-200 text-base font-medium px-2 py-1 rounded-md hover:bg-green-700"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item}
