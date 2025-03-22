@@ -3,6 +3,7 @@ import { useElementOnScreen } from '@/utils/animations';
 import { MapPin, Phone, Mail } from 'lucide-react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { Card, CardContent } from '@/components/ui/card';
+import React from "react";
 
 const Contact = () => {
   const { containerRef: foundersRef, isVisible: isFoundersVisible } = useElementOnScreen({
