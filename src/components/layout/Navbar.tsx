@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -41,10 +42,7 @@ const Navbar = () => {
             />
           </Link>
 
-          {/* Desktop Navigation - Now with bright white menu items
-          "text-white hover:text-yellow-400 transition-colors duration-200 text-base font-medium px-2 py-1 rounded-md hover:bg-white/10"
-
-           */}
+          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-10 mx-auto">
             {['Home', 'Products', 'About', 'Contact'].map((item) => (
               <a
@@ -62,7 +60,7 @@ const Navbar = () => {
             {/* Empty div to balance the layout and keep nav centered */}
           </div>
           
-          {/* Mobile menu toggle button - Made larger and more visible */}
+          {/* Mobile menu toggle button */}
           <button
             className={`md:hidden text-white p-2 rounded-md transition-colors focus:outline-none ${
               isScrolled ? 'bg-gradient-to-r from-white/20 to-white/30 hover:from-white/30 hover:to-white/40' : 'glass hover:bg-white/20'
@@ -77,13 +75,17 @@ const Navbar = () => {
             )}
           </button>
           
-          {/* Improved Mobile Menu - with white text */}
+          {/* Improved Mobile Menu - Fixed positioning issue on scroll */}
           <div
-            className={`md:hidden fixed top-[60px] left-0 right-0 bottom-0 transition-all duration-300 ease-in-out ${
-              isScrolled ? 'bg-gradient-to-b from-yellow-400/95 to-green-800/95' : 'bg-gradient-to-b from-yellow-500/90 to-green-700/90'
-            } ${
+            className={`md:hidden fixed top-[60px] left-0 right-0 bottom-0 z-40 transition-all duration-300 ease-in-out ${
               isMobileMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
             }`}
+            style={{
+              background: isScrolled 
+                ? 'linear-gradient(to bottom, rgba(250, 204, 21, 0.95), rgba(22, 101, 52, 0.95))' 
+                : 'linear-gradient(to bottom, rgba(234, 179, 8, 0.90), rgba(22, 101, 52, 0.90))',
+              backdropFilter: 'blur(8px)'
+            }}
           >
             <div className="container mx-auto px-4 py-6">
               <nav className="flex flex-col gap-6">
@@ -91,7 +93,7 @@ const Navbar = () => {
                   <a
                     key={item}
                     href={`#${item.toLowerCase()}`}
-                    className="bg-green-800 border-2 border-yellow-400 text-white hover:text-yellow-400 transition-colors duration-200 text-base font-medium px-2 py-1 rounded-md hover:bg-green-700"
+                    className="bg-green-800 border-2 border-yellow-400 text-white hover:text-yellow-400 transition-colors duration-200 text-lg font-medium px-4 py-2 rounded-md hover:bg-green-700 text-center"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {item}

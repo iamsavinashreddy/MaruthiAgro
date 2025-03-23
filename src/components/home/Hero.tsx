@@ -27,16 +27,21 @@ const Hero = () => {
       id="home"
       className="min-h-[90vh] flex items-center justify-center relative overflow-hidden pt-20"
     >
-      {/* Background with overlay */}
+      {/* Enhanced Background with reduced overlay for more prominent image */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-b from-yellow-400/40 to-green-800/30"></div>
+        {/* Reduced opacity on the gradient overlay to make the image pop more */}
+        <div className="absolute inset-0 bg-gradient-to-b from-yellow-400/30 to-green-800/25"></div>
         <img 
           src={images.hero}
           alt="Maruthi Agro Banner" 
           className="w-full h-full object-cover"
           loading="eager"
+          style={{
+            filter: 'contrast(1.1) brightness(1.05)',
+            transform: 'scale(1.02)'
+          }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-green-900/40 to-green-800/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-green-900/30 to-green-800/15"></div>
       </div>
       
       <div className="container max-w-7xl mx-auto px-4 md:px-6 py-20 relative z-10">
@@ -59,7 +64,7 @@ const Hero = () => {
           
           <p 
             ref={subtitleRef}
-            className={`text-lg md:text-xl text-white/80 max-w-2xl mb-8 transition-all duration-1000 delay-300 ${
+            className={`text-lg md:text-xl text-white/90 max-w-2xl mb-8 transition-all duration-1000 delay-300 ${
               isSubtitleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
             }`}
           >

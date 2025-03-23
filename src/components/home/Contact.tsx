@@ -1,12 +1,10 @@
 
 import { useElementOnScreen } from '@/utils/animations';
 import { MapPin, Phone, Mail } from 'lucide-react';
-import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
-import { Card, CardContent } from '@/components/ui/card';
 import React from "react";
 
 const Contact = () => {
-  const { containerRef: foundersRef, isVisible: isFoundersVisible } = useElementOnScreen<HTMLDivElement>({
+  const { containerRef: contactRef, isVisible: isContactVisible } = useElementOnScreen<HTMLDivElement>({
     root: null,
     rootMargin: '0px',
     threshold: 0.1,
@@ -20,114 +18,93 @@ const Contact = () => {
 
   return (
     <div id="contact" className="section">
+      <div className="mb-12 text-center">
+        <h2 className="heading-lg mb-4">Get In Touch</h2>
+        <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
+          We'd love to hear from you. Contact us for any inquiries about our products, partnerships, or to place an order.
+        </p>
+      </div>
+      
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        {/* Contact Information - Now on the left */}
         <div 
-          ref={foundersRef}
-          className={`bg-white rounded-2xl p-8 shadow-card border border-gold-100 transition-all duration-1000 ${
-            isFoundersVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+          ref={contactRef}
+          className={`bg-white rounded-2xl p-8 shadow-card border border-gold-100 transition-all duration-1000 h-full ${
+            isContactVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
           }`}
         >
-          <h2 className="heading-md mb-8">Our Leadership</h2>
+          <h3 className="text-2xl font-semibold text-green-800 mb-6">Contact Information</h3>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Founder */}
-            <Card className="border-gold-100">
-              <CardContent className="p-6 flex flex-col items-center">
-                <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-gold-200 mb-4">
-                  <img 
-                    src="https://images.unsplash.com/photo-1553867669-5d6ef15ffa4f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80"
-                    alt="Founder" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <h3 className="text-xl font-semibold text-green-800 text-center"> Pruthvi Pulicharla</h3>
-                <p className="text-sm text-gold-600 font-medium mb-4 text-center">Founder</p>
-                
-                <p className="text-sm text-foreground/70 mb-4 text-center">
-                 Mr Pruthvi is the visionary leader, a powerhouse in the construction and infrastructure industry. With over 15 years of experience, he has been at the forefront of delivering innovative and high-quality projects that shape skylines and strengthen communities. Committed to excellence, he continues to drive growth, sustainability, and progress in the industry.
+          <div className="space-y-6 mb-8">
+            <div className="flex items-start gap-4">
+              <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-1">
+                <MapPin className="h-5 w-5 text-green-800" />
+              </div>
+              <div>
+                <h4 className="font-medium text-lg mb-1">Our Location</h4>
+                <p className="text-foreground/70">
+                  Syno. 170, Back side of IFFCO kissan SEZ,<br />
+                  Uchaguntapalem, Dagadarthi,<br />
+                  Andhra Pradesh 524240, India
                 </p>
-                
-                <div className="space-y-3 w-full">
-                  <div className="flex items-center gap-2">
-                    <div className="w-8 h-8 rounded-full bg-gold-100 flex items-center justify-center flex-shrink-0">
-                      <Phone className="h-3.5 w-3.5 text-gold-600" />
-                    </div>
-                    <p className="text-sm text-foreground/70">
-                      <a href="tel:+911234567890" className="hover:text-gold-600 transition-colors">
-                        +91 99592 43663
-                      </a>
-                    </p>
-                  </div>
-                  
-                  <div className="flex items-center gap-2">
-                    <div className="w-8 h-8 rounded-full bg-gold-100 flex items-center justify-center flex-shrink-0">
-                      <Mail className="h-3.5 w-3.5 text-gold-600" />
-                    </div>
-                    <p className="text-sm text-foreground/70">
-                      <a href="mailto:founder@maruthiagro.com" className="hover:text-gold-600 transition-colors">
-                        founder@maruthiagro.com
-                      </a>
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
             
-            {/* Co-founder */}
-            <Card className="border-gold-100">
-              <CardContent className="p-6 flex flex-col items-center">
-                <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-gold-200 mb-4">
-                  <img 
-                    src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-                    alt="Co-Founder" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <h3 className="text-xl font-semibold text-green-800 text-center">Mr Hanuman Batchu</h3>
-                <p className="text-sm text-gold-600 font-medium mb-4 text-center">Managing Partner</p>
-                
-                <p className="text-sm text-foreground/70 mb-4 text-center">
-                  Hanuman is bringing expertise in accounting and financial management. With a keen eye for financial strategy and over 15 years of experience, he ensures the company's fiscal health, operational efficiency, and sustainable growth.
+            <div className="flex items-start gap-4">
+              <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-1">
+                <Phone className="h-5 w-5 text-green-800" />
+              </div>
+              <div>
+                <h4 className="font-medium text-lg mb-1">Phone</h4>
+                <p className="text-foreground/70">
+                  <a href="tel:+919959243663" className="hover:text-green-800 transition-colors">
+                    +91 99592 43663
+                  </a><br />
+                  <a href="tel:+919700020201" className="hover:text-green-800 transition-colors">
+                    +91 97000 20201
+                  </a>
                 </p>
-                
-                <div className="space-y-3 w-full">
-                  <div className="flex items-center gap-2">
-                    <div className="w-8 h-8 rounded-full bg-gold-100 flex items-center justify-center flex-shrink-0">
-                      <Phone className="h-3.5 w-3.5 text-gold-600" />
-                    </div>
-                    <p className="text-sm text-foreground/70">
-                      <a href="tel:+911234567891" className="hover:text-gold-600 transition-colors">
-                        +91 97000 20201
-                      </a>
-                    </p>
-                  </div>
-                  
-                  <div className="flex items-center gap-2">
-                    <div className="w-8 h-8 rounded-full bg-gold-100 flex items-center justify-center flex-shrink-0">
-                      <Mail className="h-3.5 w-3.5 text-gold-600" />
-                    </div>
-                    <p className="text-sm text-foreground/70">
-                      <a href="mailto:cofounder@maruthiagro.com" className="hover:text-gold-600 transition-colors">
-                        cofounder@maruthiagro.com
-                      </a>
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
+            
+            <div className="flex items-start gap-4">
+              <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-1">
+                <Mail className="h-5 w-5 text-green-800" />
+              </div>
+              <div>
+                <h4 className="font-medium text-lg mb-1">Email</h4>
+                <p className="text-foreground/70">
+                  <a href="mailto:info@maruthiagro.com" className="hover:text-green-800 transition-colors">
+                    info@maruthiagro.com
+                  </a>
+                </p>
+              </div>
+            </div>
           </div>
           
-          <div className="mt-6 text-center">
-            <p className="text-foreground/70">
-              Our headquarters is located at:<br />
-              Syno. 170, Back side of IFFCO kissan SEZ, Uchaguntapalem, Dagadarthi, Andhra Pradesh 524240, India
-            </p>
+          <div className="bg-green-50 p-5 rounded-xl border border-green-100">
+            <h4 className="font-medium text-lg mb-3 text-green-800">Business Hours</h4>
+            <ul className="space-y-2">
+              <li className="flex justify-between">
+                <span className="text-foreground/70">Monday - Friday:</span>
+                <span className="font-medium">9:00 AM - 6:00 PM</span>
+              </li>
+              <li className="flex justify-between">
+                <span className="text-foreground/70">Saturday:</span>
+                <span className="font-medium">9:00 AM - 4:00 PM</span>
+              </li>
+              <li className="flex justify-between">
+                <span className="text-foreground/70">Sunday:</span>
+                <span className="font-medium">Closed</span>
+              </li>
+            </ul>
           </div>
         </div>
         
+        {/* Map - Now on the right */}
         <div 
           ref={mapRef}
-          className={`transition-all duration-1000 delay-300 h-96 rounded-2xl overflow-hidden shadow-card border border-gold-100 ${
+          className={`transition-all duration-1000 delay-300 rounded-2xl overflow-hidden shadow-card border border-gold-100 h-full min-h-[400px] ${
             isMapVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
           }`}
         >
