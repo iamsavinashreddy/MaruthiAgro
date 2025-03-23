@@ -2,6 +2,7 @@
 import { useElementOnScreen } from '@/utils/animations';
 import { Check, Phone, Mail } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
+import { useRef } from 'react';
 
 const About = () => {
   const { containerRef: textRef, isVisible: isTextVisible } = useElementOnScreen({
@@ -22,17 +23,24 @@ const About = () => {
     threshold: 0.1,
   });
 
+  // Create proper refs with correct types for the div elements
+  const textDivRef = useRef<HTMLDivElement>(null);
+  const imageDivRef = useRef<HTMLDivElement>(null);
+  const leadershipDivRef = useRef<HTMLDivElement>(null);
+
   return (
     <section id="about" className="section">
       {/* Company Info Section */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center mb-24">
         <div 
-          // @ts-ignore - textRef is properly typed
-          ref={textRef}
+          ref={textDivRef}
           className={`transition-all duration-1000 ${
             isTextVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'
           }`}
         >
+          {/* Effect is triggered when textRef's element is visible */}
+          <div ref={textRef} className="hidden" aria-hidden="true"></div>
+          
           <p className="text-gold-600 text-sm font-semibold tracking-wider uppercase mb-2">
             Our Story
           </p>
@@ -75,12 +83,14 @@ const About = () => {
         </div>
         
         <div 
-          // @ts-ignore - imageRef is properly typed
-          ref={imageRef}
+          ref={imageDivRef}
           className={`relative transition-all duration-1000 delay-300 ${
             isImageVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'
           }`}
         >
+          {/* Effect is triggered when imageRef's element is visible */}
+          <div ref={imageRef} className="hidden" aria-hidden="true"></div>
+          
           <div className="rounded-2xl overflow-hidden">
             <img 
               src="https://images.unsplash.com/photo-1560532803-22bc1f7202e4?q=80&w=1974"
@@ -106,11 +116,14 @@ const About = () => {
 
       {/* Leadership Section - Moved from Contact */}
       <div 
-        ref={leadershipRef}
+        ref={leadershipDivRef}
         className={`bg-white rounded-2xl p-8 shadow-card border border-gold-100 transition-all duration-1000 mb-16 ${
           isLeadershipVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
         }`}
       >
+        {/* Effect is triggered when leadershipRef's element is visible */}
+        <div ref={leadershipRef} className="hidden" aria-hidden="true"></div>
+        
         <h2 className="heading-md mb-8 text-center">Our Leadership</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
