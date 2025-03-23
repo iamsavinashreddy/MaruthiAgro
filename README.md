@@ -42,9 +42,16 @@ To deploy:
 2. GitHub Actions will automatically build and deploy your site
 3. Visit your GitHub Pages URL to see the deployed site
 
+### GitHub Pages Configuration Notes
+
+This project uses:
+- React Router with HashRouter for GitHub Pages compatibility
+- Absolute paths for asset loading, configured in vite.config.ts
+
 ## Custom Domain Setup
 
 To use a custom domain:
 1. Configure your DNS settings to point to GitHub Pages
 2. Add your custom domain in the GitHub repository settings
-3. Ensure HTTPS is enabled for secure connections
+3. Create a CNAME file in the public directory with your domain
+4. Ensure HTTPS is enabled for secure connections
