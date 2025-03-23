@@ -12,7 +12,7 @@ interface UseElementOnScreenResult<T extends HTMLElement> {
   isVisible: boolean;
 }
 
-export const useElementOnScreen = <T extends HTMLElement = HTMLElement>(
+export const useElementOnScreen = <T extends HTMLDivElement = HTMLDivElement>(
   options: UseElementOnScreenOptions
 ): UseElementOnScreenResult<T> => {
   const containerRef = useRef<T>(null);
