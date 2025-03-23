@@ -5,7 +5,7 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "./", // This ensures assets are correctly referenced with relative paths
+  base: "/", // Changed from "./" to "/" for absolute paths
   server: {
     host: "::",
     port: 8080,
