@@ -23,17 +23,11 @@ const About = () => {
     threshold: 0.1,
   });
 
-  // Create proper refs with correct types for the div elements
-  const textDivRef = useRef<HTMLDivElement>(null);
-  const imageDivRef = useRef<HTMLDivElement>(null);
-  const leadershipDivRef = useRef<HTMLDivElement>(null);
-
   return (
     <section id="about" className="section">
       {/* Company Info Section */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center mb-24">
         <div 
-          ref={textDivRef}
           className={`transition-all duration-1000 ${
             isTextVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'
           }`}
@@ -83,7 +77,6 @@ const About = () => {
         </div>
         
         <div 
-          ref={imageDivRef}
           className={`relative transition-all duration-1000 delay-300 ${
             isImageVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'
           }`}
@@ -116,7 +109,6 @@ const About = () => {
 
       {/* Leadership Section - Moved from Contact */}
       <div 
-        ref={leadershipDivRef}
         className={`bg-white rounded-2xl p-8 shadow-card border border-gold-100 transition-all duration-1000 mb-16 ${
           isLeadershipVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
         }`}
@@ -126,7 +118,7 @@ const About = () => {
         
         <h2 className="heading-md mb-8 text-center">Our Leadership</h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Founder */}
           <Card className="border-gold-100">
             <CardContent className="p-6 flex flex-col items-center">
@@ -206,6 +198,49 @@ const About = () => {
                   <p className="text-sm text-foreground/70">
                     <a href="mailto:cofounder@maruthiagro.com" className="hover:text-gold-600 transition-colors">
                       cofounder@maruthiagro.com
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Third Leadership Position (Hidden Placeholder) */}
+          <Card className="border-gold-100 hidden">
+            <CardContent className="p-6 flex flex-col items-center">
+              <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-gold-200 mb-4">
+                <img 
+                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                  alt="Third Leadership Position" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-semibold text-green-800 text-center">Future Leader</h3>
+              <p className="text-sm text-gold-600 font-medium mb-4 text-center">Operations Director</p>
+              
+              <p className="text-sm text-foreground/70 mb-4 text-center">
+                This is a placeholder for a future leadership position. With deep industry knowledge and strategic vision, this leader will drive operational excellence and innovation across the organization.
+              </p>
+              
+              <div className="space-y-3 w-full">
+                <div className="flex items-center gap-2">
+                  <div className="w-8 h-8 rounded-full bg-gold-100 flex items-center justify-center flex-shrink-0">
+                    <Phone className="h-3.5 w-3.5 text-gold-600" />
+                  </div>
+                  <p className="text-sm text-foreground/70">
+                    <a href="tel:+911234567892" className="hover:text-gold-600 transition-colors">
+                      +91 98765 43210
+                    </a>
+                  </p>
+                </div>
+                
+                <div className="flex items-center gap-2">
+                  <div className="w-8 h-8 rounded-full bg-gold-100 flex items-center justify-center flex-shrink-0">
+                    <Mail className="h-3.5 w-3.5 text-gold-600" />
+                  </div>
+                  <p className="text-sm text-foreground/70">
+                    <a href="mailto:operations@maruthiagro.com" className="hover:text-gold-600 transition-colors">
+                      operations@maruthiagro.com
                     </a>
                   </p>
                 </div>
