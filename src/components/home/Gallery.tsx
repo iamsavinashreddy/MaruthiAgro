@@ -71,12 +71,12 @@ const Gallery = () => {
         <h2 className="heading-md">Glimpses of our Facility & Products</h2>
       </div>
       
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+      <div className="flex overflow-x-auto space-x-3 md:space-x-4">
         {galleryImages.map((image) => (
           <Dialog key={image.id}>
             <DialogTrigger asChild>
               <div 
-                className="aspect-square rounded-lg overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-300 shadow-sm hover:shadow-md"
+                className="min-w-[200px] md:min-w-[300px] aspect-square rounded-lg overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-300 shadow-sm hover:shadow-md"
                 onClick={() => setSelectedImage(image)}
               >
                 <img 
