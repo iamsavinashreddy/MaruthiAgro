@@ -2,6 +2,7 @@
 import { useElementOnScreen } from '@/utils/animations';
 import { Check, Phone, Mail } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
+import Gallery from './Gallery';
 
 const About = () => {
   const { containerRef: textRef, isVisible: isTextVisible } = useElementOnScreen({
@@ -102,6 +103,9 @@ const About = () => {
             </div>
           </div>
         </div>
+
+        {/* Photo Gallery Section - Added between About and Leadership */}
+        <Gallery />
 
         {/* Leadership Section - Centered and Responsive */}
         <div 
