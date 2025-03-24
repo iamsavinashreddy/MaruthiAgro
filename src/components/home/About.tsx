@@ -103,16 +103,16 @@ const About = () => {
           </div>
         </div>
 
-        {/* Leadership Section - Moved from Contact */}
+        {/* Leadership Section - Centered and Responsive */}
         <div 
           ref={leadershipRef}
-          className={`bg-white rounded-2xl p-8 shadow-card border border-gold-100 transition-all duration-1000 mb-16 ${
+          className={`bg-white rounded-2xl p-8 shadow-card border border-gold-100 transition-all duration-1000 mb-16 max-w-5xl mx-auto ${
             isLeadershipVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
           }`}
         >
           <h2 className="heading-md mb-8 text-center">Our Leadership</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-center">
             {/* Founder */}
             <Card className="border-gold-100">
               <CardContent className="p-6 flex flex-col items-center">

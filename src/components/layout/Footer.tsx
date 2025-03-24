@@ -129,13 +129,48 @@ const Footer = () => {
           </div>
         </div>
         
-        {/* Visible section - Copyright and Managed by */}
+        {/* Visible section - Updated layout */}
         <div className="pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-foreground/60 text-sm">
-            © {currentYear} Maruthiagro.com. All rights reserved.
-          </p>
-          <div className="text-foreground/60 text-sm">
-            Managed by <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" className="text-gold-600 hover:underline">VR Best Solutions</a>
+          {/* Social media icons on the left */}
+          <div className="flex space-x-4">
+            <a 
+              href="#" 
+              className="w-8 h-8 rounded-full bg-gold-100 flex items-center justify-center transition-colors hover:bg-gold-200"
+              aria-label="Facebook"
+            >
+              <Facebook size={16} className="text-gold-800" />
+            </a>
+            <a 
+              href="#" 
+              className="w-8 h-8 rounded-full bg-gold-100 flex items-center justify-center transition-colors hover:bg-gold-200"
+              aria-label="Instagram"
+            >
+              <Instagram size={16} className="text-gold-800" />
+            </a>
+            <a 
+              href="#" 
+              className="w-8 h-8 rounded-full bg-gold-100 flex items-center justify-center transition-colors hover:bg-gold-200"
+              aria-label="Twitter"
+            >
+              <Twitter size={16} className="text-gold-800" />
+            </a>
+            <a 
+              href="#" 
+              className="w-8 h-8 rounded-full bg-gold-100 flex items-center justify-center transition-colors hover:bg-gold-200"
+              aria-label="LinkedIn"
+            >
+              <Linkedin size={16} className="text-gold-800" />
+            </a>
+          </div>
+          
+          {/* Copyright and Managed by on the right */}
+          <div className="flex flex-col items-end">
+            <p className="text-foreground/60 text-sm">
+              © {currentYear} Maruthiagro.com. All rights reserved.
+            </p>
+            <div className="text-foreground/60 text-sm">
+              Managed by <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" className="text-gold-600 hover:underline">VR Best Solutions</a>
+            </div>
           </div>
         </div>
       </div>

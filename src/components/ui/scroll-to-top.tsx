@@ -30,8 +30,8 @@ const ScrollToTop = () => {
     });
   };
 
-  // Only show on mobile and when scrolled down
-  if (!isMobile || !isVisible) return null;
+  // Show for all screen sizes when scrolled down
+  if (!isVisible) return null;
 
   return (
     <button
