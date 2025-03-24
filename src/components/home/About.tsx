@@ -199,8 +199,8 @@ const About = () => {
               </CardContent>
             </Card>
 
-            {/* Third Leadership Position (Hidden Placeholder) */}
-            <Card className="border-gold-100">
+            {/* Third Leadership Position (Hidden) */}
+            <Card className="border-gold-100 hidden">
               <CardContent className="p-6 flex flex-col items-center">
                 <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-gold-200 mb-4">
                   <img 
