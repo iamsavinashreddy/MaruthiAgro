@@ -1,3 +1,4 @@
+
 import { Link } from 'react-router-dom';
 import { 
   MapPin, 
@@ -25,7 +26,7 @@ const Footer = () => {
               <span className="text-xl font-bold">Maruthiagro.com</span>
             </div>
             <p className="text-foreground/70 text-sm max-w-xs">
-              Premium quality food grains and flour since 1975. Committed to bringing the best agricultural products to your table.
+              Bringing Nature's Finest Grains to your table. MARUTHI Agro has been providing premium quality food grains since 2002. We are committed to bringing the best agricultural products from farm to your home.
             </p>
             <div className="flex space-x-4 pt-2">
               <a 
@@ -129,13 +130,8 @@ const Footer = () => {
           <p className="text-foreground/60 text-sm">
             © {currentYear} Maruthiagro.com. All rights reserved.
           </p>
-          <div className="flex gap-6">
-            <a href="#" className="text-foreground/60 hover:text-foreground text-sm transition-colors">
-              Privacy Policy
-            </a>
-            <a href="#" className="text-foreground/60 hover:text-foreground text-sm transition-colors">
-              Terms of Service
-            </a>
+          <div className="text-foreground/60 text-sm">
+            Managed by <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" className="text-gold-600 hover:underline">VR Best Solutions</a>
           </div>
         </div>
       </div>
