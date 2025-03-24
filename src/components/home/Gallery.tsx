@@ -1,7 +1,6 @@
-
 import { useState } from 'react';
 import { useElementOnScreen } from '@/utils/animations';
-import { Gallery as GalleryIcon, X } from 'lucide-react';
+import { Image, X } from 'lucide-react'; // Updated import
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
 
 interface GalleryImage {
@@ -62,13 +61,11 @@ const Gallery = () => {
   return (
     <div 
       ref={containerRef}
-      className={`transition-all duration-1000 mb-16 ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
-      }`}
+      className={`transition-all duration-1000 mb-16 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
     >
       <div className="text-center mb-8">
         <p className="text-gold-600 text-sm font-semibold tracking-wider uppercase mb-2 flex items-center justify-center gap-1">
-          <GalleryIcon size={16} />
+          <Image size={16} /> {/* Updated icon */}
           <span>Our Gallery</span>
         </p>
         <h2 className="heading-md">Glimpses of our Facility & Products</h2>
