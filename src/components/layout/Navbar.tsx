@@ -21,11 +21,14 @@ const Navbar = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  // Common background style for consistency
+  const navBackground = "bg-gradient-to-r from-yellow-400/90 to-green-800/90 backdrop-blur-md shadow-soft";
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'py-3 bg-gradient-to-r from-yellow-400/90 to-green-800/90 backdrop-blur-md shadow-soft' 
+          ? `py-3 ${navBackground}` 
           : 'py-5 bg-transparent'
       }`}
     >
@@ -75,15 +78,13 @@ const Navbar = () => {
             )}
           </button>
           
-          {/* Improved Mobile Menu - Fixed positioning issue on scroll */}
+          {/* Improved Mobile Menu with consistent background */}
           <div
             className={`md:hidden fixed top-[60px] left-0 right-0 bottom-0 z-40 transition-all duration-300 ease-in-out ${
               isMobileMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
             }`}
             style={{
-              background: isScrolled 
-                ? 'linear-gradient(to bottom, rgba(250, 204, 21, 0.95), rgba(22, 101, 52, 0.95))' 
-                : 'linear-gradient(to bottom, rgba(234, 179, 8, 0.90), rgba(22, 101, 52, 0.90))',
+              background: navBackground,
               backdropFilter: 'blur(8px)'
             }}
           >

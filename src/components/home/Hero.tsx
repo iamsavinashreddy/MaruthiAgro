@@ -27,21 +27,21 @@ const Hero = () => {
       id="home"
       className="min-h-[90vh] flex items-center justify-center relative overflow-hidden pt-20"
     >
-      {/* Enhanced Background with reduced overlay for more prominent image */}
+      {/* Enhanced Background with stronger overlay for better text visibility */}
       <div className="absolute inset-0 -z-10">
-        {/* Reduced opacity on the gradient overlay to make the image pop more */}
-        <div className="absolute inset-0 bg-gradient-to-b from-yellow-400/30 to-green-800/25"></div>
+        {/* Darker overlay to make text more visible */}
+        <div className="absolute inset-0 bg-gradient-to-b from-yellow-400/40 to-green-800/40"></div>
         <img 
           src={images.hero}
           alt="Maruthi Agro Banner" 
           className="w-full h-full object-cover"
           loading="eager"
           style={{
-            filter: 'contrast(1.1) brightness(1.05)',
+            filter: 'contrast(1.1) brightness(0.9)',
             transform: 'scale(1.02)'
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-green-900/50 to-green-800/40"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-green-900/60 to-green-800/50"></div>
       </div>
       
       <div className="container max-w-7xl mx-auto px-4 md:px-6 py-20 relative z-10">
@@ -58,7 +58,7 @@ const Hero = () => {
               isTitleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
             }`}
           >
-            <span className="bg-green-950/70 px-4 py-2 rounded-lg backdrop-blur-sm inline-block">
+            <span className="bg-green-950/80 px-4 py-2 rounded-lg backdrop-blur-sm inline-block shadow-lg">
               Bringing Nature's Finest<br />
               <span className="text-yellow-400">Grains to Your Table</span>
             </span>
@@ -66,7 +66,7 @@ const Hero = () => {
           
           <p 
             ref={subtitleRef}
-            className={`text-lg md:text-xl bg-green-950/70 text-white/95 max-w-2xl mb-8 transition-all duration-1000 delay-300 p-4 rounded-lg backdrop-blur-sm ${
+            className={`text-lg md:text-xl bg-green-950/80 text-white/95 max-w-2xl mb-8 transition-all duration-1000 delay-300 p-4 rounded-lg backdrop-blur-sm shadow-lg ${
               isSubtitleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
             }`}
           >
