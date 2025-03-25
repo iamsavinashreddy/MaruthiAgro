@@ -1,7 +1,9 @@
+
 import { useState } from 'react';
 import { useElementOnScreen } from '@/utils/animations';
-import { Image, X } from 'lucide-react'; // Updated import
+import { Image as ImageIcon } from 'lucide-react'; // Fixed import
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from '@/components/ui/carousel';
 
 interface GalleryImage {
   id: number;
@@ -61,47 +63,62 @@ const Gallery = () => {
   return (
     <div 
       ref={containerRef}
-      className={`transition-all duration-1000 mb-16 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
+      className={`transition-all duration-1000 mb-10 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
     >
-      <div className="text-center mb-8">
+      <div className="text-center mb-6">
         <p className="text-gold-600 text-sm font-semibold tracking-wider uppercase mb-2 flex items-center justify-center gap-1">
-          <Image size={16} /> {/* Updated icon */}
+          <ImageIcon size={16} />
           <span>Our Gallery</span>
         </p>
         <h2 className="heading-md">Glimpses of our Facility & Products</h2>
       </div>
       
-      <div className="flex overflow-x-auto space-x-3 md:space-x-4">
-        {galleryImages.map((image) => (
-          <Dialog key={image.id}>
-            <DialogTrigger asChild>
-              <div 
-                className="min-w-[200px] md:min-w-[300px] aspect-square rounded-lg overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-300 shadow-sm hover:shadow-md"
-                onClick={() => setSelectedImage(image)}
-              >
-                <img 
-                  src={image.src} 
-                  alt={image.alt} 
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
-              </div>
-            </DialogTrigger>
-            <DialogContent className="sm:max-w-4xl p-1 bg-transparent border-0">
-              <div className="relative">
-                <img 
-                  src={image.src} 
-                  alt={image.alt} 
-                  className="w-full h-auto max-h-[80vh] object-contain rounded-lg"
-                />
-                <div className="absolute bottom-0 left-0 right-0 p-4 bg-black/50 backdrop-blur-sm text-white rounded-b-lg">
-                  <p className="text-sm md:text-base">{image.alt}</p>
-                </div>
-              </div>
-            </DialogContent>
-          </Dialog>
-        ))}
-      </div>
+      <Carousel
+        opts={{
+          align: "start",
+          loop: true,
+          dragFree: false,
+        }}
+        className="w-full max-w-6xl mx-auto"
+      >
+        <CarouselContent>
+          {galleryImages.map((image) => (
+            <CarouselItem key={image.id} className="md:basis-1/2 lg:basis-1/3">
+              <Dialog>
+                <DialogTrigger asChild>
+                  <div 
+                    className="aspect-square rounded-lg overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-300 shadow-sm hover:shadow-md mx-2"
+                    onClick={() => setSelectedImage(image)}
+                  >
+                    <img 
+                      src={image.src} 
+                      alt={image.alt} 
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                </DialogTrigger>
+                <DialogContent className="sm:max-w-4xl p-1 bg-transparent border-0">
+                  <div className="relative">
+                    <img 
+                      src={image.src} 
+                      alt={image.alt} 
+                      className="w-full h-auto max-h-[80vh] object-contain rounded-lg"
+                    />
+                    <div className="absolute bottom-0 left-0 right-0 p-4 bg-black/50 backdrop-blur-sm text-white rounded-b-lg">
+                      <p className="text-sm md:text-base">{image.alt}</p>
+                    </div>
+                  </div>
+                </DialogContent>
+              </Dialog>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <div className="hidden md:block">
+          <CarouselPrevious className="left-1" />
+          <CarouselNext className="right-1" />
+        </div>
+      </Carousel>
     </div>
   );
 };

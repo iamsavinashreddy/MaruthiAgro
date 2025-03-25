@@ -7,6 +7,7 @@ import Products from '@/components/home/Products';
 import About from '@/components/home/About';
 import Contact from '@/components/home/Contact';
 import ScrollToTop from '@/components/ui/scroll-to-top';
+import Gallery from '@/components/home/Gallery';
 
 const Index = () => {
   useEffect(() => {
@@ -32,7 +33,7 @@ const Index = () => {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       
-      <main className="flex-grow">
+      <main className="flex-grow space-y-14"> {/* Reduced spacing between sections */}
         <Hero />
         <Products />
         <About />
