@@ -48,7 +48,7 @@ const About = () => {
               Today, we are a renowned name in the industry, recognized for our commitment to quality, sustainability, and customer satisfaction. Our state-of-the-art processing facility combines traditional wisdom with modern technology to ensure that every grain that leaves our mill meets the highest standards.
             </p>
             
-            <div className="flex overflow-x-auto space-x-3 mb-8">
+            <div className="flex flex-wrap gap-2 mb-8">
               {[
                 'Premium Quality Products',
                 'Modern Processing Techniques',
@@ -57,7 +57,7 @@ const About = () => {
                 'Direct Farm Sourcing',
                 'Customer Satisfaction Focus'
               ].map((item, index) => (
-                <div key={index} className="flex items-center gap-2">
+                <div key={index} className="flex items-center gap-2 w-full sm:w-auto">
                   <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
                     <Check className="h-3 w-3 text-green-600" />
                   </div>
