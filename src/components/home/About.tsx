@@ -1,4 +1,3 @@
-
 import { useElementOnScreen } from '@/utils/animations';
 import { Check, Phone, Mail } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
@@ -132,7 +131,7 @@ const About = () => {
                 <p className="text-sm text-gold-600 font-medium mb-4 text-center">Founder</p>
                 
                 <p className="text-sm text-foreground/70 mb-4 text-center">
-                 Mr Pruthvi is the visionary leader, a powerhouse in the construction and infrastructure industry. With over 15 years of experience, he has been at the forefront of delivering innovative and high-quality projects that shape skylines and strengthen communities. Committed to excellence, he continues to drive growth, sustainability, and progress in the industry.
+                  Mr Pruthvi is the visionary leader, a powerhouse in the construction and infrastructure industry. With over 15 years of experience, he has been at the forefront of delivering innovative and sustainable solutions.
                 </p>
                 
                 <div className="space-y-3 w-full">
@@ -175,7 +174,7 @@ const About = () => {
                 <p className="text-sm text-gold-600 font-medium mb-4 text-center">Managing Partner</p>
                 
                 <p className="text-sm text-foreground/70 mb-4 text-center">
-                  Hanuman is bringing expertise in accounting and financial management. With a keen eye for financial strategy and over 15 years of experience, he ensures the company's fiscal health, operational efficiency, and sustainable growth.
+                  Hanuman is bringing expertise in accounting and financial management. With a keen eye for financial strategy and over 15 years of experience, he ensures the company's fiscal health and growth.
                 </p>
                 
                 <div className="space-y-3 w-full">
@@ -218,7 +217,7 @@ const About = () => {
                 <p className="text-sm text-gold-600 font-medium mb-4 text-center">Operations Director</p>
                 
                 <p className="text-sm text-foreground/70 mb-4 text-center">
-                  This is a placeholder for a future leadership position. With deep industry knowledge and strategic vision, this leader will drive operational excellence and innovation across the organization.
+                  This is a placeholder for a future leadership position. With deep industry knowledge and strategic vision, this leader will drive operational excellence and innovation across the company.
                 </p>
                 
                 <div className="space-y-3 w-full">
