@@ -5,27 +5,27 @@ import ProductCard from '@/components/ui/ProductCard';
 const products = [
   {
     id: 1,
-    title: 'Premium Rice',
-    description: 'Finest quality premium rice grain, carefully processed for perfect texture and flavor.',
-    imageSrc: 'https://images.unsplash.com/photo-1550459251-66a8dbd4d810?q=80&w=2070',
+    title: 'Whole with skin',
+    description: 'Finest quality premium whole grain with skin, carefully processed for perfect texture and flavor.',
+    imageSrc: '/Whole-Dal-1.jpg',
   },
   {
     id: 2,
-    title: 'Wheat Flour',
-    description: "Stone-ground wheat flour that's perfect for all your baking needs.",
-    imageSrc: 'https://images.unsplash.com/photo-1635342219731-4ae49aae884e?q=80&w=1964',
+    title: 'Split with skin',
+    description: "Carefully splited version of the whole urad dal, retaining the black outer layer, and cooks faster than the whole version.",
+    imageSrc: '/Split-Dal-1.jpg,
   },
   {
     id: 3,
-    title: 'Organic Pulses',
-    description: 'Naturally grown pulses that are rich in protein and essential nutrients.',
-    imageSrc: 'https://images.unsplash.com/photo-1611177180927-da1f16cdd2aa?q=80&w=2056',
+    title: 'Whole without skin',
+    description: 'Whole dal with the black skin removed, resulting in a creamy white color and a milder flavor.',
+    imageSrc: '/Whole-Dal-2.jpg',
   },
   {
     id: 4,
-    title: 'Specialty Grains',
-    description: 'Specialty grains for the health-conscious consumer, packed with benefits.',
-    imageSrc: 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?q=80&w=1974',
+    title: 'Split without skin',
+    description: 'split version of the whole urad dal without the black skin, resulting in a creamy white color and a milder flavor',
+    imageSrc: 'Spint-Dal-2.jpg',
   },
 ];
 
