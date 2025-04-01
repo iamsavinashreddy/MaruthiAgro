@@ -13,7 +13,7 @@ const products = [
     id: 2,
     title: 'Split with skin',
     description: "Carefully splited version of the whole urad dal, retaining the black outer layer, and cooks faster than the whole version.",
-    imageSrc: '/Split-Dal-1.jpg,
+    imageSrc: '/Split-Dal-1.jpg',
   },
   {
     id: 3,
