@@ -25,7 +25,7 @@ const products = [
     id: 4,
     title: 'Split without skin',
     description: 'split version of the whole urad dal without the black skin, resulting in a creamy white color and a milder flavor',
-    imageSrc: 'Spint-Dal-2.jpg',
+    imageSrc: '/Split-Dal-2.jpg',
   },
 ];
 
