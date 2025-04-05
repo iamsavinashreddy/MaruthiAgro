@@ -5,27 +5,27 @@ import ProductCard from '@/components/ui/ProductCard';
 const products = [
   {
     id: 1,
-    title: 'Whole with skin',
+    title: 'Whole Dal(with skin)',
     description: 'Finest quality premium whole grain with skin, carefully processed for perfect texture and flavor.',
-    imageSrc: '/Whole-Dal-1.jpg',
+    imageSrc: 'https://raw.githubusercontent.com/iamsavinashreddy/vrbest-group/main/Img/whole-dal-1.png',
   },
   {
     id: 2,
-    title: 'Split with skin',
+    title: 'Split Dal(with skin)',
     description: "Carefully splited version of the whole urad dal, retaining the black outer layer, and cooks faster than the whole version.",
-    imageSrc: '/Split-Dal-1.jpg',
+    imageSrc: 'https://raw.githubusercontent.com/iamsavinashreddy/vrbest-group/main/Img/split-dal-1a.png',
   },
   {
     id: 3,
-    title: 'Whole without skin',
+    title: 'Whole Dal(without skin)',
     description: 'Whole dal with the black skin removed, resulting in a creamy white color and a milder flavor.',
-    imageSrc: '/Whole-Dal-2.jpg',
+    imageSrc: 'https://raw.githubusercontent.com/iamsavinashreddy/vrbest-group/main/Img/whole-dal-2.png',
   },
   {
     id: 4,
-    title: 'Split without skin',
+    title: 'Split Dal(without skin)',
     description: 'split version of the whole urad dal without the black skin, resulting in a creamy white color and a milder flavor',
-    imageSrc: '/Split-Dal-2.jpg',
+    imageSrc: 'https://raw.githubusercontent.com/iamsavinashreddy/vrbest-group/main/Img/split-dal-2.png',
   },
 ];
 
