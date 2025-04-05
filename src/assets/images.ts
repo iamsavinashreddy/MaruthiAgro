@@ -1,12 +1,12 @@
 
 export const images = {
-  logo: "./logo-1.jpeg",
-  hero: "./hero-1.jpeg",
+  logo: "https://raw.githubusercontent.com/iamsavinashreddy/vrbest-group/main/Img/ma-logo-1b.png",
+  hero: "https://raw.githubusercontent.com/iamsavinashreddy/vrbest-group/main/Img/MA-hero-1a.jpeg",
   products: {
-    rice: "/rice.jpg",
-    flour: "/flour.jpg",
-    wheat: "/wheat.jpg",
-    grains: "/grains.jpg",
+    prod1: "https://raw.githubusercontent.com/iamsavinashreddy/vrbest-group/main/Img/whole-dal-1.png",
+    prod2: "https://raw.githubusercontent.com/iamsavinashreddy/vrbest-group/main/Img/split-dal-1a.png",
+    prod3: "https://raw.githubusercontent.com/iamsavinashreddy/vrbest-group/main/Img/whole-dal-2.png",
+    prod4: "https://raw.githubusercontent.com/iamsavinashreddy/vrbest-group/main/Img/split-dal-2.png",
   },
   about: "/about.jpg",
   grain: "/grain.jpg",
