@@ -169,7 +169,7 @@ const Footer = () => {
               © {currentYear} Maruthiagro.com. All rights reserved.
             </p>
             <div className="text-foreground/60 text-sm">
-              Managed by <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" className="text-gold-600 hover:underline">VR Best Solutions</a>
+              Managed by <a href="https://www.vrbest.group" target="_blank" rel="noopener noreferrer" className="text-gold-600 hover:underline">VR Best Solutions</a>
             </div>
           </div>
         </div>
