@@ -17,13 +17,13 @@ const products = [
   },
   {
     id: 3,
-    title: 'Whole Dal(without skin)',
+    title: 'Whole Dal',
     description: 'Whole dal with the black skin removed, resulting in a creamy white color and a milder flavor.',
     imageSrc: 'https://raw.githubusercontent.com/iamsavinashreddy/vrbest-group/main/Img/whole-dal-2.png',
   },
   {
     id: 4,
-    title: 'Split Dal(without skin)',
+    title: 'Split Dal',
     description: 'split version of the whole urad dal without the black skin, resulting in a creamy white color and a milder flavor',
     imageSrc: 'https://raw.githubusercontent.com/iamsavinashreddy/vrbest-group/main/Img/split-dal-2.png',
   },
