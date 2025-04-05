@@ -80,15 +80,6 @@ const About = () => {
               isImageVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'
             }`}
           >
-            <div className="rounded-2xl overflow-hidden">
-              <img 
-                src="https://images.unsplash.com/photo-1560532803-22bc1f7202e4?q=80&w=1974"
-                alt="Mill workers harvesting wheat" 
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
-            </div>
-            
             <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-card hidden md:block max-w-xs">
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-10 h-10 rounded-full bg-gold-100 flex items-center justify-center text-gold-600 font-bold">
